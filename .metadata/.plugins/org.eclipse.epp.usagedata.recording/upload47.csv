@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078658195
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078658307
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078659471
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078659487
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078659493
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.redo",1360078659591
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078675635
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078676080
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078676378
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078676554
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078676678
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078676845
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677014
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677141
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677314
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677498
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677640
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677767
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078677956
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078678131
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078678301
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078678469
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078678610
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078678800
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078678965
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078679122
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078679274
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078679448
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078679585
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078679758
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078679917
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078680137
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078680289
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078680471
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078680671
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078680872
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078681044
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078681218
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078681405
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078681559
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078681786
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.redo",1360078683855
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078684372
+error,log,,,"Can't find range information for activity_main.xml",1360078684790
+error,log,,,"Can't find range information for activity_main.xml",1360078684792
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078684871
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.redo",1360078685575
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078686381
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078693715
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.selectAll",1360078695375
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360078695686
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078696120
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078696771
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078696782
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078696788
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078696793
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078697452
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078697456
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078697460
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078697463
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078699948
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078699953
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078699957
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078699960
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360078705736
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360078706659
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078707034
+opened,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1360078708312
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078708897
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078708901
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078708904
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078708907
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078709410
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078709430
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078709433
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360078709436
+started,bundle,org.eclipse.cdt.dsf,2.2.0.201202111925,"org.eclipse.cdt.dsf",1360078709909
+started,bundle,org.eclipse.cdt.dsf.gdb,4.0.2.201202111925,"org.eclipse.cdt.dsf.gdb",1360078709909
+started,bundle,org.eclipse.cdt.dsf.gdb.ui,2.2.1.201202111925,"org.eclipse.cdt.dsf.gdb.ui",1360078709917
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360078713120
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360078720180
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360078721562
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360078726784
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078727124
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078730806
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078730811
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078730814
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360078738538
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360078739325
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078740415
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078741364
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078741368
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078741372
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078741852
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078741856
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078741860
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360078748808
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360078761510
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360078767276
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360078785610
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078787287
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078787292
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078787296
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078789411
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078789415
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078789419
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078789674
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078793463
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078793468
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078793507
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360078797566
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078807194
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078808353
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078822818
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078822824
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078822828
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360078825255
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078827370
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078832727
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078833341
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.redo",1360078834102
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078834736
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078835489
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360078841595
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordPrevious",1360078860343
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360078861392
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360078864886
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078865168
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078866201
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078866205
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078866209
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078866687
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078866691
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078866694
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360078873659
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360078879197
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360078890988
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078893100
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078894737
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078894741
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078894752
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078895110
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078895132
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078895136
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078897102
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078921201
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360078921812
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.redo",1360078922205
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordPrevious",1360078925195
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360078926445
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078944200
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078945893
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.findReplace",1360078945937
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360078946132
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078947874
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360078950950
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360078959480
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078962023
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078962027
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078962031
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078964939
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078967267
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360078970648
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360078974473
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078975109
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360078979511
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360078980914
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078988523
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360078990473
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360078990477
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360078990481
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360078992911
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360078993060
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360078994011
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079002536
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079002774
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079003625
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079005073
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079005077
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079005081
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079005617
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079005621
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079005624
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079006933
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079006938
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079006942
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079009393
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079010348
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079010707
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079011154
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079011582
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079011914
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079012204
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079012522
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079012716
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079012917
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079013113
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079013299
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079013620
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079014105
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.redo",1360079014654
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079015217
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079015670
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1360079020904
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079021710
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079023633
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079023637
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079023640
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079024060
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079024064
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079024068
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079026898
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079035764
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079037929
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079044593
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079063288
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079084020
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079088214
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079089432
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079089436
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079089439
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079089881
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079089885
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079089888
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.cut",1360079099874
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079101633
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079102853
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.navigate.backwardHistory",1360079104516
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineEnd",1360079108691
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.navigate.backwardHistory",1360079109316
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079111774
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079112769
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079112773
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079112776
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079113238
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079113242
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079113245
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079120116
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079120303
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079121103
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079122512
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079122516
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079122519
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079122899
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079122903
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079122906
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079124022
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079127127
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.cut",1360079128619
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079133733

@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.lineStart",1360079135578
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079136836
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079137937
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079137941
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079137943
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079138363
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079138367
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079138368
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079148918
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079155116
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360079161203
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079163189
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079163428
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079164198
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079164202
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079164204
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079164679
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079164683
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079164685
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079173331
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079186767
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079186797
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079186812
+activated,view,org.eclipse.ui.views,3.6.0.v20110928-1505,"org.eclipse.ui.views.ContentOutline",1360079189882
+activated,editor,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.editors.CommonXmlEditor",1360079193531
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360079201667
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079202536
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360079204117
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079206226
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079206516
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079207051
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079207054
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079207058
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079207064
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079207590
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079207592
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079207595
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079207600
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079216739
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079216742
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079216746
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079216749
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079219171
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079219177
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079219182
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079219224
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079236994
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079439499
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079451071
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079451074
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079451078
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079451082
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079452901
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079452904
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079452909
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079452916
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079454828
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079454831
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079454835
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079454838
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079456495
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079456498
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079456502
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079456507
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.selectAll",1360079461818
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360079462042
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079463173
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079574441
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079584303
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079584719
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079625817
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079626284
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079626287
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079626290
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079626293
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079629600
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079629876
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079630548
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079631501
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079631505
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079631508
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079631512
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079631953
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079631956
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079631959
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079631963
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079637823
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079637838
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079637841
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079637844
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079648632
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079732251
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079734561
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079734810
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1360079735054
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079735669
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079741793
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.selectAll",1360079742155
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079742404
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079742564
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079750390
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079755705
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079757459
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079761412
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079762642
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079762648
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079762652
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079762655
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079763195
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079763199
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079763202
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079763205
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079764098
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079764102
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079764106
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079764109
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079771951
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079871083
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079873731
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079885859
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.selectAll",1360079886474
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1360079886768
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079887423
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079887986
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079887990
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079887994
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079887998
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079888492
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079888495
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079888498
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079888515
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079895488
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.lineStart",1360079895683
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1360079897135
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079898320
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079898324
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079898327
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079898331
+error,log,,,"activity_main.xml: Failed to convert @drawable/MDSLogoForLoginTrans into a drawable",1360079898686
+error,log,,,"activity_main.xml: Failed to convert @drawable/logoutButton into a drawable",1360079898689
+error,log,,,"activity_main.xml: Failed to convert @drawable/home_background into a drawable",1360079898691
+error,log,,,"activity_main.xml: Failed to convert @drawable/gradientNews into a drawable",1360079898694
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.selectAll",1360079904500
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1360079904812
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079905279
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079988158
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360079993684
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360080379862
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360080380965
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360080382364
+closed,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1360080382728
+started,bundle,org.eclipse.compare,3.5.202.R37x_v20111109-0800,"org.eclipse.compare",1360080383704
+stopped,bundle,org.scala-ide.sdt.core,2.0.0.v-2_09-201112200102-82421c5,"org.scala-ide.sdt.core",1360080384422
+stopped,bundle,org.scala-ide.sdt.aspects,2.0.0.v-2_09-201112200102-82421c5,"org.scala-ide.sdt.aspects",1360080384422
+stopped,bundle,org.eclipse.pde.ui,3.6.100.v20120103_r372,"org.eclipse.pde.ui",1360080384427
+stopped,bundle,overlay.com.android.ide.eclipse.adt.overlay,21.0.0.v201210310015-519525,"overlay.com.android.ide.eclipse.adt.overlay",1360080384427
+stopped,bundle,com.android.ide.eclipse.ndk,21.0.1.v201212060256-543035,"com.android.ide.eclipse.ndk",1360080384427
+stopped,bundle,com.android.ide.eclipse.adt,21.0.0.v201210310015-519525,"com.android.ide.eclipse.adt",1360080384439
+stopped,bundle,org.eclipse.cdt,8.0.2.201202111925,"org.eclipse.cdt",1360080384439
+stopped,bundle,org.eclipse.cdt.doc.user,5.1.1.201202111925,"org.eclipse.cdt.doc.user",1360080384439
+stopped,bundle,org.eclipse.ui.cheatsheets,3.4.100.v20110425,"org.eclipse.ui.cheatsheets",1360080384439
+stopped,bundle,org.eclipse.help.ui,3.5.101.r37_20110819,"org.eclipse.help.ui",1360080384439
+stopped,bundle,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui",1360080384439
+stopped,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201106061540,"org.eclipse.epp.usagedata.ui",1360080384439
+stopped,bundle,org.eclipse.ui.intro.universal,3.2.500.v20110510,"org.eclipse.ui.intro.universal",1360080384440
+stopped,bundle,org.eclipse.ui.intro,3.4.100.v20110425,"org.eclipse.ui.intro",1360080384440
+stopped,bundle,org.eclipse.help.webapp,3.6.1.r37_20110929,"org.eclipse.help.webapp",1360080384440
+stopped,bundle,org.eclipse.help.base,3.6.2.v201202080800,"org.eclipse.help.base",1360080384440
+stopped,bundle,org.eclipse.equinox.http.jetty,2.0.100.v20110502,"org.eclipse.equinox.http.jetty",1360080384440
+stopped,bundle,org.eclipse.m2e.discovery,1.0.200.20111228-1245,"org.eclipse.m2e.discovery",1360080384441
+stopped,bundle,org.eclipse.m2e.refactoring,1.0.200.20111228-1245,"org.eclipse.m2e.refactoring",1360080384441
+stopped,bundle,org.eclipse.m2e.editor,1.0.200.20111228-1245,"org.eclipse.m2e.editor",1360080384441
+stopped,bundle,org.eclipse.m2e.editor.xml,1.0.200.20111228-1245,"org.eclipse.m2e.editor.xml",1360080384442
+stopped,bundle,org.eclipse.m2e.jdt,1.0.200.20111228-1245,"org.eclipse.m2e.jdt",1360080384442
+stopped,bundle,org.eclipse.m2e.launching,1.0.200.20111228-1245,"org.eclipse.m2e.launching",1360080384442
+stopped,bundle,org.eclipse.m2e.usagedata,1.0.200.20111228-1245,"org.eclipse.m2e.usagedata",1360080384443
+stopped,bundle,org.eclipse.m2e.logback.configuration,1.0.200.20111228-1245,"org.eclipse.m2e.logback.configuration",1360080384444
+stopped,bundle,org.eclipse.m2e.core.ui,1.0.200.20111228-1245,"org.eclipse.m2e.core.ui",1360080384445
+stopped,bundle,org.eclipse.m2e.core,1.0.200.20111228-1245,"org.eclipse.m2e.core",1360080384445
+stopped,bundle,org.eclipse.egit.mylyn.ui,1.3.0.201202151440-r,"org.eclipse.egit.mylyn.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.bugzilla.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.bugzilla.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.context.tasks.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.context.tasks.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.help.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.help.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.java.tasks,3.8.2.v20120916-1200,"org.eclipse.mylyn.java.tasks",1360080384445
+stopped,bundle,org.eclipse.mylyn.tasks.bugs,3.8.2.v20120916-1200,"org.eclipse.mylyn.tasks.bugs",1360080384445
+stopped,bundle,org.eclipse.mylyn.team.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.team.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.wikitext.tasks.ui,1.7.2.v20120916-1200,"org.eclipse.mylyn.wikitext.tasks.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.tasks.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.tasks.ui",1360080384445
+stopped,bundle,org.eclipse.mylyn.commons.notifications.feed,1.0.2.v20120916-1200,"org.eclipse.mylyn.commons.notifications.feed",1360080384445
+stopped,bundle,org.eclipse.equinox.jsp.jasper.registry,1.0.200.v20100503,"org.eclipse.equinox.jsp.jasper.registry",1360080384446
+stopped,bundle,org.eclipse.equinox.jsp.jasper,1.0.300.v20110502,"org.eclipse.equinox.jsp.jasper",1360080384446
+stopped,bundle,org.eclipse.equinox.http.servlet,1.1.200.v20110502,"org.eclipse.equinox.http.servlet",1360080384446
+stopped,bundle,org.eclipse.egit.ui,1.3.0.201202151440-r,"org.eclipse.egit.ui",1360080384447
+stopped,bundle,org.eclipse.egit.core,1.3.0.201202151440-r,"org.eclipse.egit.core",1360080384449
+stopped,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110815-1419,"org.eclipse.equinox.p2.ui.sdk",1360080384450
+stopped,bundle,org.eclipse.mylyn.ide.ant,3.8.2.v20120916-1200,"org.eclipse.mylyn.ide.ant",1360080384450
+stopped,bundle,org.eclipse.ant.ui,3.5.101.v20120110-1739,"org.eclipse.ant.ui",1360080384450
+stopped,bundle,org.eclipse.mylyn.java.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.java.ui",1360080384450
+stopped,bundle,org.eclipse.jdt.junit,3.7.0.v20110928-1453,"org.eclipse.jdt.junit",1360080384450
+stopped,bundle,org.eclipse.jdt.apt.ui,3.3.300.v20110305-1450,"org.eclipse.jdt.apt.ui",1360080384451
+stopped,bundle,org.eclipse.jdt.debug.ui,3.6.1.v20111006_r372,"org.eclipse.jdt.debug.ui",1360080384453
+stopped,bundle,org.eclipse.wb.swing.databinding,1.3.0.r37x201202021417,"org.eclipse.wb.swing.databinding",1360080384455
+stopped,bundle,org.eclipse.wb.core.databinding,1.3.0.r37x201202052311,"org.eclipse.wb.core.databinding",1360080384455
+stopped,bundle,org.eclipse.wb.swing.FormLayout,1.3.0.r37x201202021417,"org.eclipse.wb.swing.FormLayout",1360080384455
+stopped,bundle,org.eclipse.wb.swing.MigLayout,1.3.0.r37x201202021417,"org.eclipse.wb.swing.MigLayout",1360080384455
+stopped,bundle,org.eclipse.wb.swing.java6,1.3.0.r37x201202021417,"org.eclipse.wb.swing.java6",1360080384455
+stopped,bundle,org.eclipse.wb.swing.jsr296,1.3.0.r37x201202021417,"org.eclipse.wb.swing.jsr296",1360080384455
+stopped,bundle,org.eclipse.wb.swing,1.3.0.r37x201202021417,"org.eclipse.wb.swing",1360080384455
+stopped,bundle,org.eclipse.wb.core.ui,1.3.0.r37x201202052340,"org.eclipse.wb.core.ui",1360080384455
+stopped,bundle,org.eclipse.wb.layout.group,1.3.0.r37x201202060028,"org.eclipse.wb.layout.group",1360080384455
+stopped,bundle,org.eclipse.wb.os.macosx,1.3.0.r37x201202052311,"org.eclipse.wb.os.macosx",1360080384455
+stopped,bundle,org.eclipse.wb.core,1.3.0.r37x201202052311,"org.eclipse.wb.core",1360080384455
+stopped,bundle,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui",1360080384480
+stopped,bundle,org.eclipse.wst.xsd.ui,1.2.404.v201105050216,"org.eclipse.wst.xsd.ui",1360080384480
+stopped,bundle,org.eclipse.wst.dtd.ui,1.0.600.v201103171359,"org.eclipse.wst.dtd.ui",1360080384480
+stopped,bundle,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui",1360080384480
+stopped,bundle,org.eclipse.wst.common.ui,1.1.500.v200911190730,"org.eclipse.wst.common.ui",1360080384480
+stopped,bundle,org.eclipse.wst.sse.ui,1.3.2.v201201041522,"org.eclipse.wst.sse.ui",1360080384481
+stopped,bundle,org.eclipse.cdt.codan.checkers.ui,1.0.0.201202111925,"org.eclipse.cdt.codan.checkers.ui",1360080384481
+stopped,bundle,org.eclipse.cdt.codan.ui.cxx,2.0.0.201202111925,"org.eclipse.cdt.codan.ui.cxx",1360080384481
+stopped,bundle,org.eclipse.cdt.codan.ui,2.0.1.201202111925,"org.eclipse.cdt.codan.ui",1360080384481
+stopped,bundle,org.eclipse.cdt.debug.mi.ui,6.1.1.201202111925,"org.eclipse.cdt.debug.mi.ui",1360080384481
+stopped,bundle,org.eclipse.cdt.dsf.gdb.ui,2.2.1.201202111925,"org.eclipse.cdt.dsf.gdb.ui",1360080384482
+stopped,bundle,org.eclipse.cdt.dsf.ui,2.2.1.201202111925,"org.eclipse.cdt.dsf.ui",1360080384482
+stopped,bundle,org.eclipse.cdt.gdb.ui,7.0.0.201202111925,"org.eclipse.cdt.gdb.ui",1360080384482
+stopped,bundle,org.eclipse.cdt.dsf.gdb,4.0.2.201202111925,"org.eclipse.cdt.dsf.gdb",1360080384483
+stopped,bundle,org.eclipse.cdt.launch,7.0.0.201202111925,"org.eclipse.cdt.launch",1360080384483
+stopped,bundle,org.eclipse.cdt.debug.ui,7.1.2.201202111925,"org.eclipse.cdt.debug.ui",1360080384483
+stopped,bundle,org.eclipse.cdt.managedbuilder.ui,8.0.2.201202111925,"org.eclipse.cdt.managedbuilder.ui",1360080384483
+stopped,bundle,org.eclipse.cdt.make.ui,7.1.2.201202111925,"org.eclipse.cdt.make.ui",1360080384483
+stopped,bundle,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui",1360080384525
+stopped,bundle,org.eclipse.search,3.7.0.v20110928-1504,"org.eclipse.search",1360080384564
+stopped,bundle,org.eclipse.mylyn.commons.team,0.9.1.v20120412-0100,"org.eclipse.mylyn.commons.team",1360080384564
+stopped,bundle,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.resources",1360080384564
+stopped,bundle,org.eclipse.ltk.ui.refactoring,3.6.0.v20110928-1453,"org.eclipse.ltk.ui.refactoring",1360080384565
+stopped,bundle,org.eclipse.mylyn.ide.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.ide.ui",1360080384565
+stopped,bundle,org.eclipse.mylyn.resources.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.resources.ui",1360080384565
+stopped,bundle,org.eclipse.team.cvs.ui,3.3.401.v20120126-1227,"org.eclipse.team.cvs.ui",1360080384565
+stopped,bundle,org.eclipse.team.ui,3.6.101.R37x_v20111109-0800,"org.eclipse.team.ui",1360080384566
+stopped,bundle,org.eclipse.compare,3.5.202.R37x_v20111109-0800,"org.eclipse.compare",1360080384566
+stopped,bundle,org.eclipse.wst.common.snippets,1.2.100.v201103281740,"org.eclipse.wst.common.snippets",1360080384566
+stopped,bundle,org.eclipse.ui.externaltools,3.2.0.v20111007_r372,"org.eclipse.ui.externaltools",1360080384566
+stopped,bundle,org.eclipse.debug.ui,3.7.102.v20111129-1423_r372,"org.eclipse.debug.ui",1360080384593
+stopped,bundle,org.eclipse.mylyn.commons.notifications.ui,1.0.2.v20120916-1200,"org.eclipse.mylyn.commons.notifications.ui",1360080384593
+stopped,bundle,org.eclipse.mylyn.commons.repositories.ui,1.0.2.v20120916-1200,"org.eclipse.mylyn.commons.repositories.ui",1360080384593
+stopped,bundle,org.eclipse.mylyn.context.ui,3.8.2.v20120916-1200,"org.eclipse.mylyn.context.ui",1360080384593
+stopped,bundle,org.eclipse.mylyn.commons.workbench,3.8.2.v20120916-1200,"org.eclipse.mylyn.commons.workbench",1360080384593
+stopped,bundle,org.eclipse.mylyn.wikitext.ui,1.7.2.v20120916-1200,"org.eclipse.mylyn.wikitext.ui",1360080384594
+stopped,bundle,com.android.ide.eclipse.gldebugger,21.0.0.v201210310015-519525,"com.android.ide.eclipse.gldebugger",1360080384594
+stopped,bundle,com.android.ide.eclipse.hierarchyviewer,21.0.0.v201210310015-519525,"com.android.ide.eclipse.hierarchyviewer",1360080384594

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;UselessService.java&apos; to &apos;OpenCV Sample - 15 puzzle/src/org.opencv.samples.puzzle15&apos;&#x0A;- Original project: &apos;OpenCV Sample - 15 puzzle&apos;&#x0A;- Destination element: &apos;OpenCV Sample - 15 puzzle/src/org.opencv.samples.puzzle15&apos;&#x0A;- Original element: &apos;UselessService.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;org.opencv.samples.puzzle15" element1="/src&lt;{UselessService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1359307721990" units="1" version="1.0"/>
+</session>

@@ -5,4 +5,4 @@ Switch your Eclipse workspace to the root directory. Everything should be setup 
 
 ##samples/face-detection
 
-This contains the application I'm building on top of. The loads a native and mostly-native java-based face detector. In the future, we can probably remove the native detector.
+This contains the application I'm building on top of. The loads a native and mostly-native java-based face detector. In the future, we can probably remove the native detector if we don't need the extra configurability it offers.

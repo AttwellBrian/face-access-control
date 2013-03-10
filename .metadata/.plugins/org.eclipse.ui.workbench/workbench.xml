@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="32" version="2.0">
 <workbenchAdvisor/>
-<window height="1058" width="1367" x="395" y="22">
+<window height="1058" width="1145" x="0" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -16,7 +16,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="54" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="120" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="net.sourceforge.vrapper.toolbar" itemType="typeToolBarContribution" x="32" y="22"/>
@@ -26,11 +26,11 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -39,10 +39,31 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LBP.java" partName="LBP.java" path="/Users/brianattwell/Desktop/OpenCV4Android/samples/face-detection/src/org/opencv/samples/facedetect/LBP.java" title="LBP.java" tooltip="face-detection/src/org/opencv/samples/facedetect/LBP.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/face-detection/src/org/opencv/samples/facedetect/LBP.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="296" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DetectionBasedTracker.java" partName="DetectionBasedTracker.java" path="/Users/brianattwell/Desktop/OpenCV4Android/samples/face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java" title="DetectionBasedTracker.java" tooltip="face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FdActivity.java" partName="FdActivity.java" path="/Users/brianattwell/Desktop/OpenCV4Android/samples/face-detection/src/org/opencv/samples/facedetect/FdActivity.java" title="FdActivity.java" tooltip="face-detection/src/org/opencv/samples/facedetect/FdActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/face-detection/src/org/opencv/samples/facedetect/FdActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3671" selectionTopPixel="660"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="CascadeClassifier.class" partName="CascadeClassifier.class" title="CascadeClassifier.class" tooltip="org.opencv.objdetect.CascadeClassifier" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=face-detection/\/Users\/brianattwell\/Desktop\/OpenCV4Android\/sdk\/java\/bin\/opencv library - 2.4.3.jar&lt;org.opencv.objdetect(CascadeClassifier.class"/>
+<editorState selectionHorizontalPixel="322" selectionLength="0" selectionOffset="861" selectionTopPixel="315"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProgressView" partName="Progress">
@@ -79,7 +100,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (12 items)"/>
+<category IMemento.internal.id="Warnings (13 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -134,7 +155,7 @@
 <viewState column0="300" column1="80" column2="120" column3="120" column4="120" counters="INSTRUCTION" hideunusedelements="false" linked="false" reversesort="true" roottype="GROUP" sortcolumn="3"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="scala.texteditor.actionset"/>
@@ -242,7 +263,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.29385576" ratioLeft="330" ratioRight="793" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.24812031" ratioLeft="330" ratioRight="1000" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.69278353" ratioLeft="672" ratioRight="298" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -404,7 +425,29 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/face-detection/src/org/opencv/samples/facedetect/LBP.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/face-detection/src/org/opencv/samples/facedetect/FdActivity.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=face-detection/\/Users\/brianattwell\/Desktop\/OpenCV4Android\/sdk\/java\/bin\/opencv library - 2.4.3.jar&lt;org.opencv.objdetect(CascadeClassifier.class"/>
+</editors>
+<item historyLabel="LBP.java" index="0">
+<position info="not_deleted" x="43" y="0"/>
+</item>
+<item historyLabel="DetectionBasedTracker.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FdActivity.java" index="2">
+<position info="not_deleted" x="3671" y="0"/>
+</item>
+<item historyLabel="CascadeClassifier.class" index="3">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item active="true" historyLabel="LBP.java" index="0">
+<position info="not_deleted" x="43" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -425,8 +468,17 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="CascadeClassifier.class" tooltip="org.opencv.objdetect.CascadeClassifier">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=face-detection/\/Users\/brianattwell\/Desktop\/OpenCV4Android\/sdk\/java\/bin\/opencv library - 2.4.3.jar&lt;org.opencv.objdetect(CascadeClassifier.class"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FdActivity.java" tooltip="face-detection/src/org/opencv/samples/facedetect/FdActivity.java">
 <persistable path="/face-detection/src/org/opencv/samples/facedetect/FdActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DetectionBasedTracker.java" tooltip="face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java">
+<persistable path="/face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LBP.java" tooltip="face-detection/src/org/opencv/samples/facedetect/LBP.java">
+<persistable path="/face-detection/src/org/opencv/samples/facedetect/LBP.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FdActivity.java" tooltip="OpenCV Sample - face-detection/src/org/opencv/samples/facedetect/FdActivity.java">
 <persistable path="/OpenCV Sample - face-detection/src/org/opencv/samples/facedetect/FdActivity.java"/>
@@ -460,12 +512,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CameraActivity.java" tooltip="CameraActivity/src/com/example/android/camera/CameraActivity.java">
 <persistable path="/CameraActivity/src/com/example/android/camera/CameraActivity.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Mat.class" tooltip="org.opencv.core.Mat">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=OpenCV Sample - face-detection/\/Users\/brianattwell\/Desktop\/OpenCV4Android\/sdk\/java\/bin\/opencv library - 2.4.3.jar&lt;org.opencv.core(Mat.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="DetectionBasedTracker_jni.cpp" tooltip="OpenCV Sample - face-detection/jni/DetectionBasedTracker_jni.cpp">
-<persistable path="/OpenCV Sample - face-detection/jni/DetectionBasedTracker_jni.cpp"/>
 </file>
 </mruList>
 </workbench>

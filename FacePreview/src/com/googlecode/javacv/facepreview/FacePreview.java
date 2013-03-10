@@ -44,6 +44,7 @@ import java.nio.ByteBuffer;
 import java.util.List;
 import com.googlecode.javacpp.Loader;
 import com.googlecode.javacv.cpp.opencv_objdetect;
+import com.googlecode.javacv.cpp.opencv_core.IplImage;
 
 import static com.googlecode.javacv.cpp.opencv_core.*;
 import static com.googlecode.javacv.cpp.opencv_imgproc.*;
@@ -61,7 +62,7 @@ public class FacePreview extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         // Hide the window title.
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
+        
         super.onCreate(savedInstanceState);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -78,6 +79,20 @@ public class FacePreview extends Activity {
             e.printStackTrace();
             new AlertDialog.Builder(this).setMessage(e.getMessage()).create().show();
         }
+        
+        // TEST:
+        try {
+			FacePredictor facePredictor = new FacePredictor(this);
+		    // TEST: 
+			//File imageFile = Loader.extractResource(getClass(), "/com/googlecode/javacv/facepreview/authorized_2.jpg"	,
+		    //          context.getCacheDir(), "image", ".jpg");
+		    //  IplImage image = cvLoadImage(imageFile.getAbsolutePath());
+					
+
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 }
 

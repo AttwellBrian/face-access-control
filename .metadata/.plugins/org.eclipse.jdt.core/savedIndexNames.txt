@@ -1,5 +1,0 @@
-INDEX VERSION 1.126+/Users/brianattwell/Desktop/face-access-control/.metadata/.plugins/org.eclipse.jdt.core
-2171288228.index
-119137384.index
-1680091489.index
-4104184181.index

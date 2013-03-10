@@ -21,3 +21,4 @@ local.properties
 
 .DS_STORE
 .metadata
+.metadata/*

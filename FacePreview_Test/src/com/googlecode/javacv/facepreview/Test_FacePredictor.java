@@ -13,7 +13,7 @@ import android.test.AndroidTestCase;
 
 public class Test_FacePredictor extends AndroidTestCase {
 
-	public void testRecognizeAuthorized() throws IOException {
+	public void testRecognizeThirdPerson() throws IOException {
 		FacePredictor facePredictor = new FacePredictor(getContext()); 
 		File imageFile = Loader.extractResource(getClass(),
 				"/com/googlecode/javacv/facepreview/b_03_05.jpg",

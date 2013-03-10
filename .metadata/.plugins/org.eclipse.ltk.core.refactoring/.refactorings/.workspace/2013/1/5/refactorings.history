@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;MT-List Open&apos;" deleteContents="false" description="Delete resource &apos;MT-List Open&apos;" element1="/MT-List Open" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1359307379709"/>&#x0A;<refactoring comment="Delete resource &apos;ServiceAutoStarter&apos;" deleteContents="false" description="Delete resource &apos;ServiceAutoStarter&apos;" element1="/ServiceAutoStarter" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1359308648299"/>
-</session>

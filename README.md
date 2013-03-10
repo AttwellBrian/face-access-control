@@ -1,8 +1,12 @@
 ##Setup on Mac OS X
-Setup the Android SDK and NDK. I placed the NDK at `/Applications/android-ndk-r8d/ndk-build `.
+Setup the Android SDK with Eclipse as per Google's instructions. I don' think there should be any dependence on the Android NDK.
 
-Switch your Eclipse workspace to the root directory. Everything should be setup automatically since the directory contains a `.metadata` file.
+Import the application directory into an Eclipse workspace. There should be no additional setup.
 
-##samples/face-detection
+##OpenCV References
 
-This contains the application I'm building on top of. The loads a native and mostly-native java-based face detector. In the future, we can probably remove the native detector if we don't need the extra configurability it offers.
+http://opencv.org/platforms/android/android-best-practices.html
+
+##Proposal
+
+https://docs.google.com/document/d/1qCn1KuC45r-uz-HTVkwYc8mqkEIqjNAC2T6LP0xs_6E/pub

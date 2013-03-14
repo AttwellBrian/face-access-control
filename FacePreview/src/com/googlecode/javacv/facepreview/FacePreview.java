@@ -80,6 +80,7 @@ public class FacePreview extends Activity {
             new AlertDialog.Builder(this).setMessage(e.getMessage()).create().show();
         }
         
+        /*
         // TEST:
         try {
 			FacePredictor facePredictor = new FacePredictor(this);
@@ -93,6 +94,7 @@ public class FacePreview extends Activity {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		*/
     }
 }
 

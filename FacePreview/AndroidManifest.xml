@@ -4,9 +4,6 @@
       android:versionCode="1"
       android:versionName="1.0" >
       <uses-sdk android:minSdkVersion="6" />
-      <instrumentation 
-        android:targetPackage="com.googlecode.javacv.facepreview" 
-        android:name="android.test.InstrumentationTestRunner" />
       <uses-permission android:name="android.permission.CAMERA" />
       <uses-feature android:name="android.hardware.camera" />
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>

@@ -96,7 +96,7 @@ public class FacePredictor {
       IplImage grayImage = IplImage.create(image.width(), image.height(), IPL_DEPTH_8U, 1);
       cvCvtColor(image, grayImage, CV_BGR2GRAY);
  
-      CvRect faceRectangle = detectFace(grayImage);// fail here
+      CvRect faceRectangle = detectFace(grayImage);
       images.put(imgCount, toTinyGray(image, faceRectangle));
       labels.put(imgCount, personCount);
       String name = new Integer(personCount).toString();
@@ -118,20 +118,33 @@ public class FacePredictor {
     Loader.load(opencv_objdetect.class);
     classifier = new CvHaarClassifierCascade(cvLoad(classifierFile.getAbsolutePath()));
     
-    final int numberOfImages = 8+1;
+    final int numberOfImages = (8+1)*3; // TODO: calculate this more smartly.. maybe don't need to calculate
     final MatVector images = new MatVector(numberOfImages);
     final CvMat labels = cvCreateMat(1, numberOfImages, CV_32SC1);
    
-    // TODO: process these images ahead of time
-    int imgCount = 0, personCount = 0;
-    for (int i = 2; i < 10; i++) { // training people 2-10
+    // TODO: process these images ahead of time (otherwise startup will take several minutes)
+    int imgCount = 0;
+    for (int personCount = 2; personCount < 10; personCount++) { // training people 2-10
     	// TODO: use a couple images per person. We have the four images per person available. I'm just not using them.
-        String fileName = String.format("/com/googlecode/javacv/facepreview/a_%02d_05.jpg", i);
+        String fileName = String.format("/com/googlecode/javacv/facepreview/a_%02d_05.jpg", personCount);
         addNameAndFace(fileName, imgCount, personCount, images, labels);
         imgCount++;
-        personCount++;
+        
+        fileName = String.format("/com/googlecode/javacv/facepreview/a_%02d_15.jpg", personCount);
+        addNameAndFace(fileName, imgCount, personCount, images, labels);
+        imgCount++;
+        
+        fileName = String.format("/com/googlecode/javacv/facepreview/b_%02d_15.jpg", personCount);
+        addNameAndFace(fileName, imgCount, personCount, images, labels);
+        imgCount++;
+        
     }
-    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_1.jpg", imgCount, personCount, images, labels);
+    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_1.jpg", imgCount, 11, images, labels);
+    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_2.jpg", imgCount+1, 11, images, labels);
+    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_2.jpg", imgCount+2, 11, images, labels);
+    
+    // TODO: add some asserts
+    assert (numberOfImages == labels.size());
     
     this.algorithm = ALGO_FACTORY;
     algorithm.train(images, labels);
@@ -161,6 +174,11 @@ public class FacePredictor {
     algorithm.predict(iplImage, prediction, confidence);
     String name = names.get(prediction[0]);
     Double confidence_ = 100*(THRESHHOLD - confidence[0])/THRESHHOLD;
+
+    // we return the identity with the highest confidence rating 
+    for (int i = 0; i < confidence.length; i++) {
+    	assert(confidence_ >= confidence[i]);
+    }
     return new Pair<String, Double>(name, confidence_); 
   }
     

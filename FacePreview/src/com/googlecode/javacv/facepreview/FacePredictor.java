@@ -1,20 +1,34 @@
 package com.googlecode.javacv.facepreview;
 
+import static com.googlecode.javacv.cpp.opencv_core.CV_32SC1;
+import static com.googlecode.javacv.cpp.opencv_core.IPL_DEPTH_8U;
+import static com.googlecode.javacv.cpp.opencv_core.cvClearMemStorage;
+import static com.googlecode.javacv.cpp.opencv_core.cvCreateImage;
+import static com.googlecode.javacv.cpp.opencv_core.cvCreateMat;
+import static com.googlecode.javacv.cpp.opencv_core.cvGet2D;
+import static com.googlecode.javacv.cpp.opencv_core.cvGetSeqElem;
+import static com.googlecode.javacv.cpp.opencv_core.cvGetSize;
+import static com.googlecode.javacv.cpp.opencv_core.cvLoad;
+import static com.googlecode.javacv.cpp.opencv_core.cvSetImageROI;
+import static com.googlecode.javacv.cpp.opencv_highgui.cvLoadImage;
+import static com.googlecode.javacv.cpp.opencv_imgproc.CV_BGR2GRAY;
+import static com.googlecode.javacv.cpp.opencv_imgproc.CV_INTER_LINEAR;
+import static com.googlecode.javacv.cpp.opencv_imgproc.cvCvtColor;
+import static com.googlecode.javacv.cpp.opencv_imgproc.cvEqualizeHist;
+import static com.googlecode.javacv.cpp.opencv_imgproc.cvResize;
+import static com.googlecode.javacv.cpp.opencv_objdetect.CV_HAAR_DO_CANNY_PRUNING;
+import static com.googlecode.javacv.cpp.opencv_objdetect.cvHaarDetectObjects;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.provider.MediaStore;
-import android.text.format.Time;
 import android.util.Pair;
 
 import com.googlecode.javacpp.Loader;
@@ -23,67 +37,41 @@ import com.googlecode.javacv.cpp.opencv_core.CvMat;
 import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
 import com.googlecode.javacv.cpp.opencv_core.CvRect;
 import com.googlecode.javacv.cpp.opencv_core.CvSeq;
+import com.googlecode.javacv.cpp.opencv_core.CvSize;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 import com.googlecode.javacv.cpp.opencv_core.MatVector;
-import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
-
-import static com.googlecode.javacv.cpp.opencv_core.CV_32SC1;
-import static com.googlecode.javacv.cpp.opencv_core.IPL_DEPTH_8U;
-import static com.googlecode.javacv.cpp.opencv_core.cvClearMemStorage;
-import static com.googlecode.javacv.cpp.opencv_core.cvCreateMat;
-import static com.googlecode.javacv.cpp.opencv_core.cvGetSeqElem;
-import static com.googlecode.javacv.cpp.opencv_core.cvLoad;
-import static com.googlecode.javacv.cpp.opencv_imgproc.CV_BGR2GRAY;
-import static com.googlecode.javacv.cpp.opencv_imgproc.CV_INTER_AREA;
-import static com.googlecode.javacv.cpp.opencv_imgproc.cvCvtColor;
-import static com.googlecode.javacv.cpp.opencv_imgproc.cvResize;
-import static com.googlecode.javacv.cpp.opencv_objdetect.CV_HAAR_DO_CANNY_PRUNING;
-import static com.googlecode.javacv.cpp.opencv_objdetect.cvHaarDetectObjects;
-
-import com.googlecode.javacv.cpp.opencv_core.CvMat;
-import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
-import com.googlecode.javacv.cpp.opencv_core.CvSeq;
-import com.googlecode.javacv.cpp.opencv_core.IplImage;
-import com.googlecode.javacv.cpp.opencv_core.MatVector;
-import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
 import com.googlecode.javacv.cpp.opencv_objdetect;
+import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
 
-
-import static com.googlecode.javacv.cpp.opencv_core.*;
-import static com.googlecode.javacv.cpp.opencv_imgproc.*;
-import static com.googlecode.javacv.cpp.opencv_objdetect.*;
-import static com.googlecode.javacv.cpp.opencv_highgui.*;
-
+// Purpose: trains and uses a FaceRecognizer class
 // minimally based off of https://github.com/pathikrit/JFaceRecog/blob/master/src/lib/FacialRecognition.java
 public class FacePredictor {
       
-    // We can try out different algorithms here: http://docs.opencv.org/trunk/modules/contrib/doc/facerec/facerec_api.html
-    private static final Double THRESHHOLD = 80d;
+    // see description of different algorithms here: http://docs.opencv.org/trunk/modules/contrib/doc/facerec/facerec_api.html
+    private static final Double THRESHHOLD = Double.MAX_VALUE/2; // higher means a loser threshold.
     private static final FaceRecognizer ALGO_FACTORY =
         com.googlecode.javacv.cpp.opencv_contrib.createLBPHFaceRecognizer(1, 8, 8, 8, THRESHHOLD);
-        //com.googlecode.javacv.cpp.opencv_contrib.createFisherFaceRecognizer(0, THRESHHOLD);
-        //com.googlecode.javacv.cpp.opencv_contrib.createEigenFaceRecognizer(0, THRESHHOLD);
-    private static final Pair<Integer, Integer> scale = new Pair<Integer, Integer>(100, 100);
+        private static final Map<Integer, String> names = new HashMap<Integer, String>();
+    public final FaceRecognizer algorithm;
 
-    private static final Map<Integer, String> names = new HashMap<Integer, String>();
-    private final FaceRecognizer algorithm;
-
-    private Context context;
+    private Context context; // store for debugging
     
+    // Save IplImage to disk, so we can look at it later
     private static void debugPrintIplImage(IplImage src, Context context) {
     	Bitmap tmpbitmap = IplImageToBitmap(src);
         MediaStore.Images.Media.insertImage(context.getContentResolver(), tmpbitmap, "image" + Calendar.getInstance().get(Calendar.SECOND) + debugPictureCount++ , "temp");
     }
     
-    private static Bitmap IplImageToBitmap(IplImage src) {
+    // todo; delete
+    private static Bitmap IplImageToBitmap(IplImage src) {//don't need to do this anymore... can use the cvSave function
         int width = src.width();
         int height = src.height();
         int smallFactor = 8;
         Bitmap bitmap = Bitmap.createBitmap(width/smallFactor, height/smallFactor, Bitmap.Config.ARGB_8888);
-        for(int r=0;r<height;r+=smallFactor) {
-            for(int c=0;c<width;c+=smallFactor) {
-                int gray = (int) Math.floor(cvGet2D(src,r,c).getVal(0));
-                bitmap.setPixel(c/smallFactor, r/smallFactor, Color.argb(255, gray, gray, gray));
+        for(int r=0;r<height/smallFactor;r+=1) {
+            for(int c=0;c<width/smallFactor;c+=1) {
+                int gray = (int) Math.floor(cvGet2D(src,r*smallFactor,c*smallFactor).getVal(0));
+                bitmap.setPixel(c, r, Color.argb(255, gray, gray, gray));
             }
         }
         return bitmap;
@@ -92,24 +80,30 @@ public class FacePredictor {
   private void addNameAndFace(String fileName, int imgCount, int personCount, MatVector images, CvMat labels) throws IOException {
       File imageFile = Loader.extractResource(getClass(), fileName,
               context.getCacheDir(), "image", ".jpg");
-      IplImage image = cvLoadImage(imageFile.getAbsolutePath());
+      IplImage image = cvLoadImage(imageFile.getAbsolutePath()); // according to traceView, this is 75% of the time
+      addNameAndFace(image, imgCount, personCount, images, labels);
+  }
+  
+  private void addNameAndFace(IplImage image, int imgCount, int personCount, MatVector images, CvMat labels) throws IOException {
       IplImage grayImage = IplImage.create(image.width(), image.height(), IPL_DEPTH_8U, 1);
       cvCvtColor(image, grayImage, CV_BGR2GRAY);
  
-      CvRect faceRectangle = detectFace(grayImage);
+      CvRect faceRectangle = detectFace(grayImage);  
       images.put(imgCount, toTinyGray(image, faceRectangle));
       labels.put(imgCount, personCount);
       String name = new Integer(personCount).toString();
-      names.put(personCount, name);	  
+      names.put(personCount, name);
   }
-    
-  public FacePredictor(Context context) throws IOException {
+  
+  // This is a slow function. It is slow, because it has to load a lot of images.
+  // This doesn't need to be a problem. 
+  public FacePredictor(Context context, IplImage [] authorizedImages) throws IOException {
     
     this.context = context;
     
     // Load the classifier file from Java resources.
     File classifierFile = Loader.extractResource(getClass(),
-        "/com/googlecode/javacv/facepreview/haarcascade_frontalface_alt.xml",
+        "/com/googlecode/javacv/facepreview/data/haarcascade_frontalface_alt.xml",
         context.getCacheDir(), "classifier", ".xml");
     if (classifierFile == null || classifierFile.length() <= 0) {
         throw new IOException("Could not extract the classifier file from Java resource.");
@@ -123,31 +117,36 @@ public class FacePredictor {
     final CvMat labels = cvCreateMat(1, numberOfImages, CV_32SC1);
    
     // TODO: process these images ahead of time (otherwise startup will take several minutes)
-    int imgCount = 0;
+    int imgCount = 0;  
     for (int personCount = 2; personCount < 10; personCount++) { // training people 2-10
     	// TODO: use a couple images per person. We have the four images per person available. I'm just not using them.
-        String fileName = String.format("/com/googlecode/javacv/facepreview/a_%02d_05.jpg", personCount);
+        String fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_05.jpg", personCount);
         addNameAndFace(fileName, imgCount, personCount, images, labels);
         imgCount++;
         
-        fileName = String.format("/com/googlecode/javacv/facepreview/a_%02d_15.jpg", personCount);
+        fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_15.jpg", personCount);
         addNameAndFace(fileName, imgCount, personCount, images, labels);
         imgCount++;
         
-        fileName = String.format("/com/googlecode/javacv/facepreview/b_%02d_15.jpg", personCount);
+        fileName = String.format("/com/googlecode/javacv/facepreview/data/b_%02d_15.jpg", personCount);
         addNameAndFace(fileName, imgCount, personCount, images, labels);
         imgCount++;
         
     }
-    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_1.jpg", imgCount, 11, images, labels);
-    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_2.jpg", imgCount+1, 11, images, labels);
-    addNameAndFace("/com/googlecode/javacv/facepreview/authorized_2.jpg", imgCount+2, 11, images, labels);
     
-    // TODO: add some asserts
+    addNameAndFace(authorizedImages[0], imgCount, 11, images, labels);
+    addNameAndFace(authorizedImages[1], imgCount+1, 11, images, labels);
+    addNameAndFace(authorizedImages[2], imgCount+2, 11, images, labels);
+    
     assert (numberOfImages == labels.size());
     
     this.algorithm = ALGO_FACTORY;
     algorithm.train(images, labels);
+  }
+    
+  public boolean authenticate(IplImage image) {
+	  String name = identify(image).first;
+	  return name != null && name.equals("11");
   }
   
   /**
@@ -184,7 +183,6 @@ public class FacePredictor {
     
 
   private static final CvMemStorage storage = CvMemStorage.create();
-  private static final int F = 4; // scaling factor
   private static CvHaarClassifierCascade classifier ;
 
   static int debugPictureCount = 0;
@@ -199,18 +197,25 @@ public class FacePredictor {
     return  new CvRect(cvGetSeqElem(cvSeq, 0));
   }
 
+  private static final CvSize SMALL_IMAGE_SIZE = new CvSize(400,400);
+  
   /**
    * Images should be grayscaled and scaled-down for faster calculations
    */
-  private IplImage toTinyGray(IplImage image, CvRect r) {
+  private IplImage toTinyGray(IplImage image, CvRect r /* (x,y) is the top corner */) {
       IplImage gray = cvCreateImage(cvGetSize(image), IPL_DEPTH_8U, 1);
-      IplImage roi = cvCreateImage(cvGetSize(image), IPL_DEPTH_8U, 1);
-      CvRect r1 = new CvRect(r.x()-10, r.y()-10, r.width()+10, r.height()+10);
+      IplImage roi = cvCreateImage(SMALL_IMAGE_SIZE, IPL_DEPTH_8U, 1);
+
+      int width = Math.max(r.width(), r.height());
+      int x = r.x() + (r.width()-width)/2;
+      int y = r.y() + (r.height()-width)/2;
+      
+      CvRect r1 = new CvRect(x, y, width, width);// consider adding +10 on all sides
       cvCvtColor(image, gray, CV_BGR2GRAY);
       cvSetImageROI(gray, r1);
       cvResize(gray, roi, CV_INTER_LINEAR);
       cvEqualizeHist(roi, roi);
-      	debugPrintIplImage(roi, context);
+      	//debugPrintIplImage(roi, context);
       return roi;
   }
 }

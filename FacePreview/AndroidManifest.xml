@@ -3,19 +3,37 @@
       package="com.googlecode.javacv.facepreview"
       android:versionCode="1"
       android:versionName="1.0" >
-      <uses-sdk android:minSdkVersion="6" />
+      <uses-sdk android:minSdkVersion="11" />
+      
       <uses-permission android:name="android.permission.CAMERA" />
       <uses-feature android:name="android.hardware.camera" />
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
       <application android:label="@string/app_name">
           <activity
-              android:name="FacePreview"
-              android:label="@string/app_name"
+              android:name="Introduction"
+              android:label="Introduction"
+              android:theme="@android:style/Theme.Holo.Light"
               android:screenOrientation="landscape">
               <intent-filter>
                   <action android:name="android.intent.action.MAIN" />
                   <category android:name="android.intent.category.LAUNCHER" />
               </intent-filter>
           </activity>
+          <activity
+              android:name="com.googlecode.javacv.facepreview.AuthorizationSetup"
+              android:label="@string/app_name"
+              android:theme="@android:style/Theme.Holo.Light"
+              android:screenOrientation="landscape" />
+		  <activity
+              android:name="CompletedAuthorization"
+              android:label="Setup complete!"
+              android:theme="@android:style/Theme.Holo.Light"
+              android:screenOrientation="landscape" />
+		  <service android:name="RecognizerService" >
+		  	<intent-filter>
+				<action android:name="com.googlecode.javacv.facepreview.compute_histograms" />
+				<action android:name="com.googlecode.javacv.facepreview.authenticate" />
+			</intent-filter>    
+		  </service>
       </application>
 </manifest>

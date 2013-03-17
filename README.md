@@ -3,7 +3,7 @@ All computations are done inside AsyncTasks, inside (UI) Activitys. For simplici
 
 FacePredictor takes images as input, determines where the face is located and guesses who the face belongs to.
 
-BackgroundConsistencyAnalysis is used to determine whether the face is actually a foreground face, or likely a picture of a face.
+BackgroundConsistencyAnalysis is used to determine whether the face is actually a foreground face, or likely a picture of a face (ie, a spoofed face).
 
 FaceView does some processing of video frames. And passes frames to the recognition service and BackgroundConsistencyAnalysis.
 

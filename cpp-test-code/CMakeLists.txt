@@ -1,4 +1,4 @@
-project( DisplayImage )
+project( gaussian )
 find_package( OpenCV REQUIRED )
-add_executable( DisplayImage DisplayImage )
-target_link_libraries( DisplayImage ${OpenCV_LIBS} )
+add_executable( gaussian gaussian )
+target_link_libraries( gaussian ${OpenCV_LIBS} )

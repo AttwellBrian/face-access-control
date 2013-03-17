@@ -10,8 +10,8 @@
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
       <application android:label="@string/app_name">
           <activity
-              android:name="Introduction"
-              android:label="Introduction"
+              android:name="Launcher"
+              android:label="Face Unlock"
               android:theme="@android:style/Theme.Holo.Light"
               android:screenOrientation="landscape">
               <intent-filter>
@@ -20,8 +20,17 @@
               </intent-filter>
           </activity>
           <activity
+              android:name="Introduction"
+              android:label="Face Unlock"
+              android:theme="@android:style/Theme.Holo.Light"
+              android:screenOrientation="landscape">
+          </activity>
+          <activity
+              android:name="com.googlecode.javacv.facepreview.LockScreen"
+              android:theme="@android:style/Theme.Holo.Light"
+              android:screenOrientation="landscape" />
+          <activity
               android:name="com.googlecode.javacv.facepreview.AuthorizationSetup"
-              android:label="@string/app_name"
               android:theme="@android:style/Theme.Holo.Light"
               android:screenOrientation="landscape" />
 		  <activity

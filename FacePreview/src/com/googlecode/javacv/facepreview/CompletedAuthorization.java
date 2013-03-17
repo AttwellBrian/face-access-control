@@ -20,8 +20,9 @@ public class CompletedAuthorization extends Activity {
         textView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//Intent myIntent = new Intent(CompletedAuthorization.this, FacePreview.class);
-				//CompletedAuthorization.this.startActivity(myIntent);				
+				Intent intent = new Intent(CompletedAuthorization.this, LockScreen.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				CompletedAuthorization.this.startActivity(intent);				
 			}
 		});
     }

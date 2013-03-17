@@ -144,5 +144,41 @@ public class Test_FacePredictor extends AndroidTestCase {
 		assertTrue(facePredictor.authenticate(image));
 	}
 	
+	public void testBlackAndWhite() throws Exception {
+		// Use testing image from training set, as a sanity test
+		File imageFile = Loader.extractResource(getClass(),
+				"/com/googlecode/javacv/facepreview/data/a_05_05.jpg",
+				getContext().getCacheDir(), "image", ".jpg");
+	    IplImage image = cvLoadImage(imageFile.getAbsolutePath());
+	    String name = facePredictor.identify(image).first;
+	    assertEquals("5", name);
+	}
+	
+	
+	public void testSavingAndLoading() throws Exception {
+		facePredictor.save(getContext(), "file.xml");
+		
+		FacePredictor facePredictor2 = facePredictor;
+		facePredictor = new FacePredictor(getContext(), "file.xml");
+		testRecognizeForthPerson();
+		facePredictor = facePredictor2;
+	}
+
+	// This is allowed to fail
+	public void testCurrentRecognizer() throws Exception {
+		FacePredictor facePredictor2 = facePredictor;
+		facePredictor = new FacePredictor(getContext(), "recognizer.xml");
+		testRecognizeForthPerson();
+		facePredictor = facePredictor2;
+	}
+	
+	public void testNoFace() throws Exception {
+		File imageFile = Loader.extractResource(getClass(),
+				"/com/googlecode/javacv/facepreview/data/no_face.jpg",
+				getContext().getCacheDir(), "image", ".jpg");
+	    IplImage image = cvLoadImage(imageFile.getAbsolutePath());
+	    String name = facePredictor.identify(image).first;
+	    assertEquals(null, name);
+	}
 	
 }

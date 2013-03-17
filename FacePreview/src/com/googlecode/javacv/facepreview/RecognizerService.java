@@ -2,28 +2,17 @@ package com.googlecode.javacv.facepreview;
 
 import static com.googlecode.javacv.cpp.opencv_highgui.cvLoadImage;
 
-import java.io.FileDescriptor;
 import java.io.IOException;
-import java.util.List;
 
 import android.app.Service;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Binder;
 import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Parcel;
-import android.os.RemoteException;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import com.googlecode.javacpp.Loader;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 
 // Assumption: unbinding doesn't happen
-// maybe this isn't the correct way to do this.
-// FORGET THIS SERVICE, JUST USE A SEPERATE THREAD
 // NO, USE A BOUND SERVICE (http://developer.android.com/guide/components/bound-services.html#Binder)
 
 public class RecognizerService extends Service {
@@ -33,11 +22,14 @@ public class RecognizerService extends Service {
 	
 	@Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+		// try loading the the predictor from file
+		try {
+			facePredictor = new FacePredictor(this, "recognizer.xml");
+		} catch (Exception e) {
+			
+		}
         // We want this service to continue running until it is explicitly
         // stopped, so return sticky.
-		
-		//initPredictor();//should check if we are starting or not
-		
         return START_STICKY;//should consider changing this later
     }
 	
@@ -65,13 +57,15 @@ public class RecognizerService extends Service {
     
    
     public void initPredictor() {
-		try {
+		try {		
+			
 			IplImage [] authorizedImages = {
     				cvLoadImage(getApplicationContext().getFilesDir() + "/face_image_1.jpg"),
     				cvLoadImage(getApplicationContext().getFilesDir() + "/face_image_2.jpg"),
     				cvLoadImage(getApplicationContext().getFilesDir() + "/face_image_3.jpg")
     		};
 			facePredictor = new FacePredictor(this, authorizedImages);
+			facePredictor.save(this, "recognizer.xml");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

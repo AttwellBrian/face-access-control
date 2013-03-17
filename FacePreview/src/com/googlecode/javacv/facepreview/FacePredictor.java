@@ -11,6 +11,7 @@ import static com.googlecode.javacv.cpp.opencv_core.cvGetSize;
 import static com.googlecode.javacv.cpp.opencv_core.cvLoad;
 import static com.googlecode.javacv.cpp.opencv_core.cvSetImageROI;
 import static com.googlecode.javacv.cpp.opencv_highgui.cvLoadImage;
+import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
 import static com.googlecode.javacv.cpp.opencv_imgproc.CV_BGR2GRAY;
 import static com.googlecode.javacv.cpp.opencv_imgproc.CV_INTER_LINEAR;
 import static com.googlecode.javacv.cpp.opencv_imgproc.cvCvtColor;
@@ -57,7 +58,7 @@ public class FacePredictor {
     private Context context; // store for debugging
     
     // Save IplImage to disk, so we can look at it later
-    private static void debugPrintIplImage(IplImage src, Context context) {
+    public static void debugPrintIplImage(IplImage src, Context context) {
     	Bitmap tmpbitmap = IplImageToBitmap(src);
         MediaStore.Images.Media.insertImage(context.getContentResolver(), tmpbitmap, "image" + Calendar.getInstance().get(Calendar.SECOND) + debugPictureCount++ , "temp");
     }
@@ -66,7 +67,7 @@ public class FacePredictor {
     private static Bitmap IplImageToBitmap(IplImage src) {//don't need to do this anymore... can use the cvSave function
         int width = src.width();
         int height = src.height();
-        int smallFactor = 8;
+        int smallFactor = 4;
         Bitmap bitmap = Bitmap.createBitmap(width/smallFactor, height/smallFactor, Bitmap.Config.ARGB_8888);
         for(int r=0;r<height/smallFactor;r+=1) {
             for(int c=0;c<width/smallFactor;c+=1) {
@@ -95,29 +96,45 @@ public class FacePredictor {
       names.put(personCount, name);
   }
   
+  // Load from file
+  public FacePredictor(Context applicationContext, String filename) throws Exception {
+	    File file = new File(applicationContext.getFilesDir() + "/" + filename);
+	    if (!file.exists()) {
+	    	throw new Exception();
+	    }
+	    
+	    this.context = applicationContext;
+	    loadClassifier();
+	  	algorithm = ALGO_FACTORY;
+	    algorithm.load(context.getExternalFilesDir(null).getAbsolutePath() + "/" + filename);
+  }
+  
+  private void loadClassifier() throws IOException {
+	// Load the classifier file from Java resources.
+	    File classifierFile = Loader.extractResource(getClass(),
+	        "/com/googlecode/javacv/facepreview/data/haarcascade_frontalface_alt.xml",
+	        context.getCacheDir(), "classifier", ".xml");
+	    if (classifierFile == null || classifierFile.length() <= 0) {
+	        throw new IOException("Could not extract the classifier file from Java resource.");
+	    }
+	    // Preload the opencv_objdetect module to work around a known bug.
+	    Loader.load(opencv_objdetect.class);
+	    classifier = new CvHaarClassifierCascade(cvLoad(classifierFile.getAbsolutePath()));
+  }
+  
   // This is a slow function. It is slow, because it has to load a lot of images.
   // This doesn't need to be a problem. 
   public FacePredictor(Context context, IplImage [] authorizedImages) throws IOException {
     
     this.context = context;
-    
-    // Load the classifier file from Java resources.
-    File classifierFile = Loader.extractResource(getClass(),
-        "/com/googlecode/javacv/facepreview/data/haarcascade_frontalface_alt.xml",
-        context.getCacheDir(), "classifier", ".xml");
-    if (classifierFile == null || classifierFile.length() <= 0) {
-        throw new IOException("Could not extract the classifier file from Java resource.");
-    }
-    // Preload the opencv_objdetect module to work around a known bug.
-    Loader.load(opencv_objdetect.class);
-    classifier = new CvHaarClassifierCascade(cvLoad(classifierFile.getAbsolutePath()));
+    loadClassifier();
     
     final int numberOfImages = (8+1)*3; // TODO: calculate this more smartly.. maybe don't need to calculate
     final MatVector images = new MatVector(numberOfImages);
     final CvMat labels = cvCreateMat(1, numberOfImages, CV_32SC1);
    
     // TODO: process these images ahead of time (otherwise startup will take several minutes)
-    int imgCount = 0;  
+    int imgCount = 0;      
     for (int personCount = 2; personCount < 10; personCount++) { // training people 2-10
     	// TODO: use a couple images per person. We have the four images per person available. I'm just not using them.
         String fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_05.jpg", personCount);
@@ -149,9 +166,7 @@ public class FacePredictor {
 	  return name != null && name.equals("11");
   }
   
-  /**
-   * Identify the face in bounding box r in image
-   */
+  // NOT EVER USED
   Pair<String, Double> identify(IplImage image, CvRect face) {
     final IplImage iplImage = toTinyGray(image, face);
     final int[] prediction = new int[1];
@@ -161,13 +176,24 @@ public class FacePredictor {
     Double confidence_ = 100*(THRESHHOLD - confidence[0])/THRESHHOLD;
     return new Pair<String, Double>(name, confidence_); 
   }
-    
+  
+  // Input needs to be B
   public Pair<String, Double> identify(IplImage image) {
-    IplImage grayImage = IplImage.create(image.width(), image.height(), IPL_DEPTH_8U, 1);
-    cvCvtColor(image, grayImage, CV_BGR2GRAY);
+    // Convert to grayscale, if not already done
+	IplImage grayImage;
+    if (image.nChannels() == 1) {
+    	grayImage = image;
+    } else {
+    	grayImage = IplImage.create(image.width(), image.height(), IPL_DEPTH_8U, 1);
+    	cvCvtColor(image, grayImage, CV_BGR2GRAY);
+    }
+    
     CvRect faceRectangle = detectFace(grayImage);
+    if (faceRectangle.isNull()) {
+    	return new Pair<String, Double>(null, (double) 0); 
+    }
 	  
-    final IplImage iplImage = toTinyGray(image, faceRectangle);
+    final IplImage iplImage = toTiny(grayImage, faceRectangle);
     final int[] prediction = new int[1];
     final double[] confidence = new double[1];
     algorithm.predict(iplImage, prediction, confidence);
@@ -180,7 +206,6 @@ public class FacePredictor {
     }
     return new Pair<String, Double>(name, confidence_); 
   }
-    
 
   private static final CvMemStorage storage = CvMemStorage.create();
   private static CvHaarClassifierCascade classifier ;
@@ -190,11 +215,14 @@ public class FacePredictor {
    * This does facial detection and NOT facial recognition
    */
   private synchronized CvRect detectFace(IplImage image) {
-	cvClearMemStorage(storage);
-    
-    final CvSeq cvSeq = cvHaarDetectObjects(image, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
-    assert ( cvSeq.total() > 0);
-    return  new CvRect(cvGetSeqElem(cvSeq, 0));
+	synchronized (this) {//TODO: improve this
+		cvClearMemStorage(storage);
+	
+	    final CvSeq cvSeq = cvHaarDetectObjects(image, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
+	    assert !cvSeq.isNull();
+
+	    return new CvRect(cvGetSeqElem(cvSeq, 0));
+	}
   }
 
   private static final CvSize SMALL_IMAGE_SIZE = new CvSize(400,400);
@@ -204,18 +232,26 @@ public class FacePredictor {
    */
   private IplImage toTinyGray(IplImage image, CvRect r /* (x,y) is the top corner */) {
       IplImage gray = cvCreateImage(cvGetSize(image), IPL_DEPTH_8U, 1);
+      cvCvtColor(image, gray, CV_BGR2GRAY);		
+      return toTiny(gray, r);
+  }
+  
+  private IplImage toTiny(IplImage gray, CvRect r /* (x,y) is the top corner */) {
       IplImage roi = cvCreateImage(SMALL_IMAGE_SIZE, IPL_DEPTH_8U, 1);
 
       int width = Math.max(r.width(), r.height());
       int x = r.x() + (r.width()-width)/2;
       int y = r.y() + (r.height()-width)/2;
       
-      CvRect r1 = new CvRect(x, y, width, width);// consider adding +10 on all sides
-      cvCvtColor(image, gray, CV_BGR2GRAY);
-      cvSetImageROI(gray, r1);
+      CvRect r1 = new CvRect(x, y, width, width);// consider adding +10 on all sides									//THIS IS LIKELY FAILING!!!
+      cvSetImageROI(gray, r1);//set portion that will be processed on
       cvResize(gray, roi, CV_INTER_LINEAR);
       cvEqualizeHist(roi, roi);
       	//debugPrintIplImage(roi, context);
-      return roi;
+      return roi;  
   }
+
+	public void save(Context applicationContext, String filename) {		
+		algorithm.save(context.getExternalFilesDir(null).getAbsolutePath() + "/" + filename);
+	}
 }

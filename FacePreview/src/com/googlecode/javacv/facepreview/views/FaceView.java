@@ -4,31 +4,37 @@ import static com.googlecode.javacv.cpp.opencv_core.IPL_DEPTH_8U;
 import static com.googlecode.javacv.cpp.opencv_core.cvClearMemStorage;
 import static com.googlecode.javacv.cpp.opencv_core.cvGetSeqElem;
 import static com.googlecode.javacv.cpp.opencv_core.cvLoad;
-import static com.googlecode.javacv.cpp.opencv_objdetect.CV_HAAR_DO_CANNY_PRUNING;
-import static com.googlecode.javacv.cpp.opencv_objdetect.cvHaarDetectObjects;
+import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ImageFormat;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.hardware.Camera;
 import android.view.View;
 
 import com.googlecode.javacpp.Loader;
 import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
 import com.googlecode.javacv.cpp.opencv_core.CvRect;
+import com.googlecode.javacv.cpp.opencv_core.CvScalar;
 import com.googlecode.javacv.cpp.opencv_core.CvSeq;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 import com.googlecode.javacv.cpp.opencv_objdetect;
 import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
 
-
+// can we use startFaceDetection on camera? probably not
 public class FaceView extends View implements Camera.PreviewCallback {
-    public static final int SUBSAMPLING_FACTOR = 4;
+    public static final int SUBSAMPLING_FACTOR = 4;//4;//TODO: set this to 1
 
     public IplImage grayImage;
     public String displayedText = "Tap the screen to set your face - This side up.";    
@@ -36,13 +42,13 @@ public class FaceView extends View implements Camera.PreviewCallback {
     private CvHaarClassifierCascade classifier;
     private CvMemStorage storage;
     private CvSeq faces;
-
+    
     public FaceView(Context context) throws IOException {
         super(context);
  
         // Load the classifier file from Java resources.
         File classifierFile = Loader.extractResource(getClass(),
-            "/com/googlecode/javacv/facepreview/haarcascade_frontalface_alt.xml",
+            "/com/googlecode/javacv/facepreview/data/haarcascade_frontalface_alt.xml",
             context.getCacheDir(), "classifier", ".xml");
         if (classifierFile == null || classifierFile.length() <= 0) {
             throw new IOException("Could not extract the classifier file from Java resource.");
@@ -57,7 +63,7 @@ public class FaceView extends View implements Camera.PreviewCallback {
         }
         storage = CvMemStorage.create();
     }
-
+    
     public void onPreviewFrame(final byte[] data, final Camera camera) {
         try {
             Camera.Size size = camera.getParameters().getPreviewSize();
@@ -65,15 +71,32 @@ public class FaceView extends View implements Camera.PreviewCallback {
             camera.addCallbackBuffer(data);
         } catch (RuntimeException e) {
             // The camera has probably just been released, ignore.
+        	System.err.println(e.toString());
         }
     }
 
+    public interface FaceViewImageCallback {
+    	void image(IplImage image /*BGR*/);
+    }
+    public void setFaceViewImageCallback(FaceViewImageCallback callback) {
+    	mCallback = callback;
+    }
+    FaceViewImageCallback mCallback = null;
+    
+    // TODO: this more efficienty using built in API, or parallel for http://stackoverflow.com/questions/4010185/parallel-for-for-java
     protected void processImage(byte[] data, int width, int height) {
         // First, downsample our image and convert it into a grayscale IplImage
         int f = SUBSAMPLING_FACTOR;
         if (grayImage == null || grayImage.width() != width/f || grayImage.height() != height/f) {
-            grayImage = IplImage.create(width/f, height/f, IPL_DEPTH_8U, 1);
+        	try {
+        		grayImage = IplImage.create(width/f, height/f, IPL_DEPTH_8U, 1);
+        	} catch (Exception e) {
+        		// ignore exception. It is only a warning in this case
+        		System.err.println(e.toString());
+        	}
         }
+   
+    	// TODO: spead this up
         int imageWidth  = grayImage.width();
         int imageHeight = grayImage.height();
         int dataStride = f*width;
@@ -87,11 +110,47 @@ public class FaceView extends View implements Camera.PreviewCallback {
             }
         }
 
+
+        // TODO: use the full image
+        if (mCallback != null) {
+        	
+        	//f = 1;
+        	/*
+        	IplImage image = IplImage.create(width/f, height/f, IPL_DEPTH_8U, 1);
+            int imageWidth  = image.width();
+            int imageHeight = image.height();
+            int dataStride = f*width;
+            int imageStride = image.widthStep();
+            ByteBuffer imageBuffer = image.getByteBuffer();
+            for (int y = 0; y < imageHeight; y++) {
+                int dataLine = y*dataStride;
+                int imageLine = y*imageStride;
+                for (int x = 0; x < imageWidth; x++) {
+                    imageBuffer.put(imageLine + x, data[dataLine + f*x]);
+                }
+            }
+            */
+
+            if (debugPictureCount == 0) {
+            	debugPrintIplImage(grayImage, this.getContext());
+            }
+            mCallback.image(grayImage);
+        }
+        
         cvClearMemStorage(storage);
-        faces = cvHaarDetectObjects(grayImage, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
+        // TODO: make this asynchronous
+        //faces = cvHaarDetectObjects(grayImage, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
         postInvalidate();
     }
 
+    // todo; delete
+    static int debugPictureCount = 0;
+    private static void debugPrintIplImage(IplImage src, Context context) {
+    	File file = new File(context.getExternalFilesDir(null), "testimage_same.jpg");
+    	cvSaveImage(file.getAbsolutePath(), src);
+    	debugPictureCount++;
+    }
+    
     @Override
     protected void onDraw(Canvas canvas) {
         Paint paint = new Paint();

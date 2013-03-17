@@ -28,9 +28,10 @@ import android.widget.Toast;
 
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 import com.googlecode.javacv.facepreview.views.FaceView;
+import com.googlecode.javacv.facepreview.views.FaceView.FaceViewImageCallback;
 import com.googlecode.javacv.facepreview.views.Preview;
 
-public class LockScreen extends Activity {
+public class LockScreen extends Activity implements FaceView.FaceViewImageCallback {
     private FrameLayout layout;
     private FaceView faceView;
     private Preview mPreview;
@@ -45,13 +46,14 @@ public class LockScreen extends Activity {
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        bindService(new Intent(LockScreen.this, RecognizerService.class), mConnection, Context.BIND_AUTO_CREATE);
+        bindService(new Intent(LockScreen.this, RecognizerService.class), mConnection, Context.BIND_ABOVE_CLIENT);
         
         // Create our Preview view and set it as the content of our activity.
         try {
             layout = new FrameLayout(this);
             faceView = new FaceView(this);
             mPreview = new Preview(this, faceView);
+            faceView.setFaceViewImageCallback(this);
             layout.addView(mPreview);
             layout.addView(faceView);
             setContentView(layout);
@@ -61,6 +63,46 @@ public class LockScreen extends Activity {
         }
         
     }
+    
+    private static long lastUnixTime = System.currentTimeMillis();//don't use this for subsecond
+    
+	@Override
+	public void image(IplImage image) {
+
+		final IplImage ownedImage = image.clone();
+		final RecognizerService service = mBoundService;
+		if (service.facePredictor == null) {
+			return;
+		}
+		
+		// Rate limit the image analysis (should probably be done in the other function)
+		if (System.currentTimeMillis() <= lastUnixTime + 4000) {
+			return;
+		}
+		lastUnixTime = System.currentTimeMillis();
+		
+		new AsyncTask<RecognizerService, Void, Boolean>() {
+			@Override
+			protected Boolean doInBackground(RecognizerService... params) {
+				return service.facePredictor.authenticate(ownedImage);
+			}
+			@Override
+			protected void onPostExecute(Boolean result) {
+				if (result) {
+					//AlertDialog.Builder builder = new AlertDialog.Builder(LockScreen.this);
+					//builder.setMessage("You have unlocked the app!").setTitle("Success");
+					//AlertDialog dialog = builder.create();
+					//dialog.show();
+				}
+				
+				int duration = Toast.LENGTH_SHORT;
+				Toast toast = Toast.makeText(getApplicationContext(), "Debug: result = " + result, duration);
+				toast.show();
+				
+				// TODO: only let one of these async tasks execute at once (for performance reasons, not for correctness reasons)
+			}
+		}.execute();
+	}
     
     private RecognizerService mBoundService;
     private ServiceConnection mConnection = new ServiceConnection() {
@@ -79,4 +121,5 @@ public class LockScreen extends Activity {
     	        mBoundService = null;
     	    }
     	};
+
 }

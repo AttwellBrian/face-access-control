@@ -88,8 +88,13 @@ public class AuthorizationSetup extends Activity {
 					
 					// TODO: instead of copying grayImage, copy the full image.
 					// since this gets called on UI thread, shouldn't be any issue directly grabbing the entire grayImage
-					IplImage copiedImage = new IplImage(faceView.grayImage);
-					grayImages.add(copiedImage);
+					try {
+						IplImage copiedImage = new IplImage(faceView.grayImage);
+						grayImages.add(copiedImage);
+					} catch (Exception e) {
+						// catch phony exception that gets thrown as warning
+					}
+					
 					
 					// TODO: initialize faceView.displayedText  somewhere
 					
@@ -105,18 +110,23 @@ public class AuthorizationSetup extends Activity {
 						faceView.displayedText = "Tap the screen to set the FINAL picture of your face - This side up.";
 						cvSaveImage(getApplicationContext().getFilesDir() + "/face_image_2.jpg", faceView.grayImage);
 					} else if (grayImages.size() == 3) {
+						text = "Final image is securely set";
 						cvSaveImage(getApplicationContext().getFilesDir() + "/face_image_3.jpg", faceView.grayImage);
 						
 						// Kick off the computation of the histograms into a seperate thread. Ideally, we
 						// would have already started this service.		
 						final RecognizerService service = mBoundService;
 						new AsyncTask<RecognizerService, Void, Void>() {
-							protected void doInBackground(RecognizerService service) {
-								service.initPredictor();
-							}
 							@Override
 							protected Void doInBackground(RecognizerService... params) {
+								service.initPredictor();
 								return null;
+							}
+							@Override
+							protected void onPostExecute(Void result) {
+								int duration = Toast.LENGTH_SHORT;
+								Toast toast = Toast.makeText(getApplicationContext(), "Recognizer Initialization is complete", duration);
+								toast.show();	
 							}
 						}.execute();
 						
@@ -138,6 +148,12 @@ public class AuthorizationSetup extends Activity {
             new AlertDialog.Builder(this).setMessage(e.getMessage()).create().show();
         }
         
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	unbindService(mConnection);
+    	super.onDestroy();
     }
     
     private RecognizerService mBoundService;

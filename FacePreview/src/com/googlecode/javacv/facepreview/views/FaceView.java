@@ -5,6 +5,8 @@ import static com.googlecode.javacv.cpp.opencv_core.cvClearMemStorage;
 import static com.googlecode.javacv.cpp.opencv_core.cvGetSeqElem;
 import static com.googlecode.javacv.cpp.opencv_core.cvLoad;
 import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
+import static com.googlecode.javacv.cpp.opencv_objdetect.CV_HAAR_DO_CANNY_PRUNING;
+import static com.googlecode.javacv.cpp.opencv_objdetect.cvHaarDetectObjects;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -21,7 +23,9 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.YuvImage;
 import android.hardware.Camera;
+import android.os.AsyncTask;
 import android.view.View;
+import android.widget.Toast;
 
 import com.googlecode.javacpp.Loader;
 import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
@@ -31,10 +35,12 @@ import com.googlecode.javacv.cpp.opencv_core.CvSeq;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 import com.googlecode.javacv.cpp.opencv_objdetect;
 import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
+import com.googlecode.javacv.facepreview.RecognizerService;
+
 
 // can we use startFaceDetection on camera? probably not
 public class FaceView extends View implements Camera.PreviewCallback {
-    public static final int SUBSAMPLING_FACTOR = 4;//4;//TODO: set this to 1
+    public static final int SUBSAMPLING_FACTOR = 4;
 
     public IplImage grayImage;
     public String displayedText = "Tap the screen to set your face - This side up.";    
@@ -110,40 +116,40 @@ public class FaceView extends View implements Camera.PreviewCallback {
             }
         }
 
-
-        // TODO: use the full image
         if (mCallback != null) {
-        	
-        	//f = 1;
-        	/*
-        	IplImage image = IplImage.create(width/f, height/f, IPL_DEPTH_8U, 1);
-            int imageWidth  = image.width();
-            int imageHeight = image.height();
-            int dataStride = f*width;
-            int imageStride = image.widthStep();
-            ByteBuffer imageBuffer = image.getByteBuffer();
-            for (int y = 0; y < imageHeight; y++) {
-                int dataLine = y*dataStride;
-                int imageLine = y*imageStride;
-                for (int x = 0; x < imageWidth; x++) {
-                    imageBuffer.put(imageLine + x, data[dataLine + f*x]);
-                }
-            }
-            */
-
             if (debugPictureCount == 0) {
-            	debugPrintIplImage(grayImage, this.getContext());
+            	//debugPrintIplImage(grayImage, this.getContext());
             }
             mCallback.image(grayImage);
         }
         
-        cvClearMemStorage(storage);
-        // TODO: make this asynchronous
-        //faces = cvHaarDetectObjects(grayImage, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
-        postInvalidate();
+        
+        // The following 12 lines perform the following asynchronously:
+        //		cvClearMemStorage(storage);
+        // 		faces = cvHaarDetectObjects(grayImage, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
+        // 		postInvalidate();
+        if (!currentlyProcessing) {
+        	currentlyProcessing = true;
+            final IplImage imageCopy = grayImage.clone();
+			new AsyncTask<Void, Void, Void>() {
+				@Override
+				protected Void doInBackground(Void... params) {
+					cvClearMemStorage(storage);
+					faces = cvHaarDetectObjects(imageCopy, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING); //note that I perform redundant calls to this. I later call this again inside the predictor
+					return null;
+				}
+				@Override
+				protected void onPostExecute(Void result) {
+					postInvalidate();	
+					currentlyProcessing = false;
+				}
+			}.execute();
+        }
     }
 
-    // todo; delete
+    private boolean currentlyProcessing = false; // note: only access this in main thread
+    
+    // todo: delete
     static int debugPictureCount = 0;
     private static void debugPrintIplImage(IplImage src, Context context) {
     	File file = new File(context.getExternalFilesDir(null), "testimage_same.jpg");

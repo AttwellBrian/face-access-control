@@ -15,4 +15,4 @@ The two above components are not yet connected.
 https://docs.google.com/document/d/1qCn1KuC45r-uz-HTVkwYc8mqkEIqjNAC2T6LP0xs_6E/pub
 
 ##Testing
-Source code for a test project are contained inside the FacePreview_Test project.
+Source code for a test project are contained inside the FacePreview_Test sub-project.

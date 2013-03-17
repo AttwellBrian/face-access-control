@@ -133,8 +133,12 @@ public class FacePredictor {
     final MatVector images = new MatVector(numberOfImages);
     final CvMat labels = cvCreateMat(1, numberOfImages, CV_32SC1);
    
-    // TODO: process these images ahead of time (otherwise startup will take several minutes)
     int imgCount = 0;      
+    addNameAndFace(authorizedImages[0], imgCount++, 11, images, labels);
+    addNameAndFace(authorizedImages[1], imgCount++, 11, images, labels);
+    addNameAndFace(authorizedImages[2], imgCount++, 11, images, labels);
+    
+    // TODO: process these images ahead of time (otherwise startup will take several minutes)
     for (int personCount = 2; personCount < 10; personCount++) { // training people 2-10
     	// TODO: use a couple images per person. We have the four images per person available. I'm just not using them.
         String fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_05.jpg", personCount);
@@ -150,10 +154,6 @@ public class FacePredictor {
         imgCount++;
         
     }
-    
-    addNameAndFace(authorizedImages[0], imgCount, 11, images, labels);
-    addNameAndFace(authorizedImages[1], imgCount+1, 11, images, labels);
-    addNameAndFace(authorizedImages[2], imgCount+2, 11, images, labels);
     
     assert (numberOfImages == labels.size());
     

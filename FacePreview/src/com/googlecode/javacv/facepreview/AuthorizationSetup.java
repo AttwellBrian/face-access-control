@@ -25,6 +25,7 @@ package com.googlecode.javacv.facepreview;
 import static com.googlecode.javacv.cpp.opencv_core.cvGet2D;
 import static com.googlecode.javacv.cpp.opencv_highgui.cvSaveImage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.LinkedList;
@@ -68,8 +69,6 @@ public class AuthorizationSetup extends Activity {
         super.onCreate(savedInstanceState);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        bindService(new Intent(AuthorizationSetup.this, RecognizerService.class), mConnection, Context.BIND_AUTO_CREATE);
         
         // Create our Preview view and set it as the content of our activity.
         try {
@@ -104,31 +103,17 @@ public class AuthorizationSetup extends Activity {
 					CharSequence text = "First image is securely set";
 					if (grayImages.size() == 1) {
 						faceView.displayedText = "Tap the screen to set a SECOND picture of your face - This side up.";
-						cvSaveImage(getApplicationContext().getFilesDir() + "/face_image_1.jpg", faceView.grayImage);
+						File file = new File(getApplicationContext().getExternalFilesDir(null), "face_image_1.jpg");
+						cvSaveImage(file.getAbsolutePath(), faceView.grayImage);
 					} else if (grayImages.size() == 2) {
 						text = "Second image is securely set";
 						faceView.displayedText = "Tap the screen to set the FINAL picture of your face - This side up.";
-						cvSaveImage(getApplicationContext().getFilesDir() + "/face_image_2.jpg", faceView.grayImage);
+						File file = new File(getApplicationContext().getExternalFilesDir(null), "face_image_2.jpg");
+						cvSaveImage(file.getAbsolutePath(), faceView.grayImage);
 					} else if (grayImages.size() == 3) {
 						text = "Final image is securely set";
-						cvSaveImage(getApplicationContext().getFilesDir() + "/face_image_3.jpg", faceView.grayImage);
-						
-						// Kick off the computation of the histograms into a seperate thread. Ideally, we
-						// would have already started this service.		
-						final RecognizerService service = mBoundService;
-						new AsyncTask<RecognizerService, Void, Void>() {
-							@Override
-							protected Void doInBackground(RecognizerService... params) {
-								service.initPredictor();
-								return null;
-							}
-							@Override
-							protected void onPostExecute(Void result) {
-								int duration = Toast.LENGTH_SHORT;
-								Toast toast = Toast.makeText(getApplicationContext(), "Recognizer Initialization is complete", duration);
-								toast.show();	
-							}
-						}.execute();
+						File file = new File(getApplicationContext().getExternalFilesDir(null), "face_image_3.jpg");
+						cvSaveImage(file.getAbsolutePath(), faceView.grayImage);
 						
 						// Tell the user they are finished with their authorization. Don't let them
 						// return to the current activity, since you aren't allowed to perform setup twice.
@@ -150,29 +135,6 @@ public class AuthorizationSetup extends Activity {
         
     }
     
-    @Override
-    protected void onDestroy() {
-    	unbindService(mConnection);
-    	super.onDestroy();
-    }
-    
-    private RecognizerService mBoundService;
-    private ServiceConnection mConnection = new ServiceConnection() {
-    	public void onServiceConnected(ComponentName className, IBinder service) {
-    	        // This is called when the connection with the service has been
-    	        // established, giving us the service object we can use to
-    	        // interact with the service.  Because we have bound to a explicit
-    	        // service that we know is running in our own process, we can
-    	        // cast its IBinder to a concrete class and directly access it.
-    	        mBoundService = ((RecognizerService.RecognizerServiceBinder) service).getService();
-    	    }
-
-    	    public void onServiceDisconnected(ComponentName className) {
-    	        // Because it is running in our same process, we should never
-    	        // see this happen.
-    	        mBoundService = null;
-    	    }
-    	};
     
 /*
     // todo; delete

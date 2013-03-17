@@ -8,7 +8,9 @@
       <uses-permission android:name="android.permission.CAMERA" />
       <uses-feature android:name="android.hardware.camera" />
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-      <application android:label="@string/app_name">
+      <application
+          android:label="@string/app_name"
+          android:icon="@drawable/ic_launcher">
           <activity
               android:name="Launcher"
               android:label="Face Unlock"
@@ -35,14 +37,8 @@
               android:screenOrientation="landscape" />
 		  <activity
               android:name="CompletedAuthorization"
-              android:label="Setup complete!"
+              android:label="Processing images..."
               android:theme="@android:style/Theme.Holo.Light"
               android:screenOrientation="landscape" />
-		  <service android:name="RecognizerService" >
-		  	<intent-filter>
-				<action android:name="com.googlecode.javacv.facepreview.compute_histograms" />
-				<action android:name="com.googlecode.javacv.facepreview.authenticate" />
-			</intent-filter>    
-		  </service>
       </application>
 </manifest>

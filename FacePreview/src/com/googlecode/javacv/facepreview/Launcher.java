@@ -17,7 +17,6 @@ public class Launcher extends Activity {
 
         File recognizerFile = new File(this.getExternalFilesDir(null).getAbsolutePath() + "/recognizer.xml");
 	    if (recognizerFile.exists()) {
-	    	startService(new Intent(this, RecognizerService.class));
 	    	Intent intent = new Intent(this,LockScreen.class);
 	    	startActivity(intent);
 	    	finish();

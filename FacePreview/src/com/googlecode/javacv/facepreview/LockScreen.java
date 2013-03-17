@@ -35,18 +35,16 @@ public class LockScreen extends Activity implements FaceView.FaceViewImageCallba
     private FrameLayout layout;
     private FaceView faceView;
     private Preview mPreview;
+    private FacePredictor facePredictor;
+    private static long lastUnixTime = System.currentTimeMillis();//don't use this for subsecond
 
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Hide the window title.
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        
+        requestWindowFeature(Window.FEATURE_NO_TITLE);        // Hide the window title.
         super.onCreate(savedInstanceState);
-
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        bindService(new Intent(LockScreen.this, RecognizerService.class), mConnection, Context.BIND_ABOVE_CLIENT);
+        loadFacePredictor();
         
         // Create our Preview view and set it as the content of our activity.
         try {
@@ -64,14 +62,24 @@ public class LockScreen extends Activity implements FaceView.FaceViewImageCallba
         
     }
     
-    private static long lastUnixTime = System.currentTimeMillis();//don't use this for subsecond
+    private void loadFacePredictor() {
+    	new AsyncTask<Void, Void, FacePredictor>() {
+			@Override
+			protected FacePredictor doInBackground(Void... params) {
+				return FacePredictorFactory.createFacePredictor(LockScreen.this);
+			}
+			@Override
+			protected void onPostExecute(FacePredictor result) {
+				facePredictor = result;
+			}
+    	}.execute();
+    }
     
 	@Override
 	public void image(IplImage image) {
 
 		final IplImage ownedImage = image.clone();
-		final RecognizerService service = mBoundService;
-		if (service.facePredictor == null) {
+		if (facePredictor == null) {
 			return;
 		}
 		
@@ -81,10 +89,10 @@ public class LockScreen extends Activity implements FaceView.FaceViewImageCallba
 		}
 		lastUnixTime = System.currentTimeMillis();
 		
-		new AsyncTask<RecognizerService, Void, Boolean>() {
+		new AsyncTask<Void, Void, Boolean>() {
 			@Override
-			protected Boolean doInBackground(RecognizerService... params) {
-				return service.facePredictor.authenticate(ownedImage);
+			protected Boolean doInBackground(Void... n) {
+				return facePredictor.authenticate(ownedImage);
 			}
 			@Override
 			protected void onPostExecute(Boolean result) {
@@ -104,22 +112,4 @@ public class LockScreen extends Activity implements FaceView.FaceViewImageCallba
 		}.execute();
 	}
     
-    private RecognizerService mBoundService;
-    private ServiceConnection mConnection = new ServiceConnection() {
-    	public void onServiceConnected(ComponentName className, IBinder service) {
-    	        // This is called when the connection with the service has been
-    	        // established, giving us the service object we can use to
-    	        // interact with the service.  Because we have bound to a explicit
-    	        // service that we know is running in our own process, we can
-    	        // cast its IBinder to a concrete class and directly access it.
-    	        mBoundService = ((RecognizerService.RecognizerServiceBinder) service).getService();
-    	    }
-
-    	    public void onServiceDisconnected(ComponentName className) {
-    	        // Because it is running in our same process, we should never
-    	        // see this happen.
-    	        mBoundService = null;
-    	    }
-    	};
-
 }

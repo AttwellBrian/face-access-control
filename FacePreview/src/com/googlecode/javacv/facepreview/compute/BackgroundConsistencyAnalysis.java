@@ -120,11 +120,6 @@ public class BackgroundConsistencyAnalysis {
 	public boolean pass() {
 		if (motionTrendFace.size() < length - 1) 
 			return false;
-				
-		double CMD = 0;
-		for (Double value : motion_metric_ratio_chart) {
-			CMD += value;
-		}
 		
 		// sum motion_metric_ratio_chart and motionTrendFace
 		return (totalMotionTrendFace() >= faceMotionMin) && (CMD() <= maxCMD) ;

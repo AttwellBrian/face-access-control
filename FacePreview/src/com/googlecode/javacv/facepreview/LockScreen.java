@@ -28,12 +28,12 @@ import android.widget.Toast;
 
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
 import com.googlecode.javacv.facepreview.views.FaceView;
-import com.googlecode.javacv.facepreview.views.FaceView.FaceViewImageCallback;
+import com.googlecode.javacv.facepreview.views.FaceViewWithAnalysis;
 import com.googlecode.javacv.facepreview.views.Preview;
 
-public class LockScreen extends Activity implements FaceView.FaceViewImageCallback {
+public class LockScreen extends Activity implements FaceViewWithAnalysis.FaceViewImageCallback {
     private FrameLayout layout;
-    private FaceView faceView;
+    private FaceViewWithAnalysis faceView;
     private Preview mPreview;
     private FacePredictor facePredictor;
     private static long lastUnixTime = System.currentTimeMillis();//don't use this for subsecond
@@ -49,7 +49,7 @@ public class LockScreen extends Activity implements FaceView.FaceViewImageCallba
         // Create our Preview view and set it as the content of our activity.
         try {
             layout = new FrameLayout(this);
-            faceView = new FaceView(this);
+            faceView = new FaceViewWithAnalysis(this);
             mPreview = new Preview(this, faceView);
             faceView.setFaceViewImageCallback(this);
             layout.addView(mPreview);

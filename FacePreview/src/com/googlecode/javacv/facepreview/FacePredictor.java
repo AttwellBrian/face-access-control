@@ -17,7 +17,7 @@ import static com.googlecode.javacv.cpp.opencv_imgproc.CV_INTER_LINEAR;
 import static com.googlecode.javacv.cpp.opencv_imgproc.cvCvtColor;
 import static com.googlecode.javacv.cpp.opencv_imgproc.cvEqualizeHist;
 import static com.googlecode.javacv.cpp.opencv_imgproc.cvResize;
-import static com.googlecode.javacv.cpp.opencv_objdetect.CV_HAAR_DO_CANNY_PRUNING;
+import static com.googlecode.javacv.cpp.opencv_objdetect.CV_HAAR_FIND_BIGGEST_OBJECT;
 import static com.googlecode.javacv.cpp.opencv_objdetect.cvHaarDetectObjects;
 
 import java.io.File;
@@ -218,7 +218,7 @@ public class FacePredictor {
 	synchronized (this) {//TODO: improve this
 		cvClearMemStorage(storage);
 	
-	    final CvSeq cvSeq = cvHaarDetectObjects(image, classifier, storage, 1.1, 3, CV_HAAR_DO_CANNY_PRUNING);
+	    final CvSeq cvSeq = cvHaarDetectObjects(image, classifier, storage, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT);
 	    assert !cvSeq.isNull();
 
 	    return new CvRect(cvGetSeqElem(cvSeq, 0));
@@ -243,7 +243,7 @@ public class FacePredictor {
       int x = r.x() + (r.width()-width)/2;
       int y = r.y() + (r.height()-width)/2;
       
-      CvRect r1 = new CvRect(x, y, width, width);// consider adding +10 on all sides									//THIS IS LIKELY FAILING!!!
+      CvRect r1 = new CvRect(x, y, width, width);// consider adding +10 on all sides
       cvSetImageROI(gray, r1);//set portion that will be processed on
       cvResize(gray, roi, CV_INTER_LINEAR);
       cvEqualizeHist(roi, roi);

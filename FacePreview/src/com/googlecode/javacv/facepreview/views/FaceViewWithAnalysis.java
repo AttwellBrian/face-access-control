@@ -33,18 +33,25 @@ import com.googlecode.javacv.cpp.opencv_video.BackgroundSubtractorMOG2;
 import com.googlecode.javacv.facepreview.compute.BackgroundConsistencyAnalysis;
 
 // can we use startFaceDetection on camera? probably not
-public class FaceView extends View implements Camera.PreviewCallback {
+public class FaceViewWithAnalysis extends View implements Camera.PreviewCallback {
     public static final int CONSISTENCY_SUBSAMPLING_FACTOR = 8;
     public static final int RECOGNITION_SUBSAMPLING_FACTOR = 4;
 
     public IplImage grayImage;
+    public IplImage largerGrayImage;
+    private IplImage foreground;
+    private Bitmap forgroundBitmap;
     public String displayedText = "Tap the screen to set your face - This side up.";    
     
     private CvHaarClassifierCascade classifier;
     private CvMemStorage storage;
     private CvSeq faces;
     
-    public FaceView(Context context) throws IOException {
+    private BackgroundConsistencyAnalysis consistencyAnalysis = new BackgroundConsistencyAnalysis();
+    
+    private BackgroundSubtractorMOG2 backgroundSubtractor;
+    
+    public FaceViewWithAnalysis(Context context) throws IOException {
         super(context);
  
         // Load the classifier file from Java resources.
@@ -63,7 +70,8 @@ public class FaceView extends View implements Camera.PreviewCallback {
             throw new IOException("Could not load the classifier file.");
         }
         storage = CvMemStorage.create();
-         
+        
+        backgroundSubtractor = new BackgroundSubtractorMOG2(); 
     }
     
     public void onPreviewFrame(final byte[] data, final Camera camera) {
@@ -76,6 +84,14 @@ public class FaceView extends View implements Camera.PreviewCallback {
         	System.err.println(e.toString());
         }
     }
+
+    public interface FaceViewImageCallback {
+    	void image(IplImage image /*BGR*/);
+    }
+    public void setFaceViewImageCallback(FaceViewImageCallback callback) {
+    	mCallback = callback;
+    }
+    FaceViewImageCallback mCallback = null;
     
     private void createSubsampledImage(byte[] data, int width, int height, int f, IplImage subsampledImage) {
     	// TODO: speed this up
@@ -94,6 +110,8 @@ public class FaceView extends View implements Camera.PreviewCallback {
     }
     
     // on main thread 
+    // the following could be pipelined (via ThreadPoolExecutor)
+    // TODO: this more efficienty using built in API, or parallel for http://stackoverflow.com/questions/4010185/parallel-for-for-java
     protected void processImage(byte[] data, int width, int height) {
     	if (grayImage == null || grayImage.width() != width/CONSISTENCY_SUBSAMPLING_FACTOR || grayImage.height() != height/CONSISTENCY_SUBSAMPLING_FACTOR) {
         	try {
@@ -105,10 +123,55 @@ public class FaceView extends View implements Camera.PreviewCallback {
         }
     	createSubsampledImage(data, width, height, CONSISTENCY_SUBSAMPLING_FACTOR, grayImage);
         
+        // TODO: see if this callback is on the UI thread... if not, then the
+        // below asynchronous thing probably shouldn't be asynchronous
+        // or maybe not.. Perhaps we want 
+        
+        if (foreground == null) {
+			foreground = IplImage.create(grayImage.width(),
+					grayImage.height(), IPL_DEPTH_8U, 1);
+		}
+        
+        // this function has linear variance
+        final double learningRate = 0.05;
+        backgroundSubtractor.apply(grayImage, foreground, learningRate);
+        
+        // This callback only needs to be executed every few seconds. For this particular callback, we could do a larger subsampling
+        if (mCallback != null) {
+        	if (largerGrayImage == null || largerGrayImage.width() != width/RECOGNITION_SUBSAMPLING_FACTOR || largerGrayImage.height() != height/RECOGNITION_SUBSAMPLING_FACTOR) {
+            	try {
+            		largerGrayImage = IplImage.create(width/RECOGNITION_SUBSAMPLING_FACTOR, height/RECOGNITION_SUBSAMPLING_FACTOR, IPL_DEPTH_8U, 1);
+            	} catch (Exception e) {
+            		// ignore exception. It is only a warning in this case
+            		System.err.println(e.toString());
+            	}
+            }
+        	createSubsampledImage(data, width, height, RECOGNITION_SUBSAMPLING_FACTOR, largerGrayImage);
+            if (debugPictureCount == 0) {
+            	//debugPrintIplImage(grayImage, this.getContext());
+            }
+            mCallback.image(grayImage);
+        }
+
    		// detect face
 		cvClearMemStorage(storage);
 		faces = cvHaarDetectObjects(grayImage, classifier, storage, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT);
+        
+	    // This is only needed for display reasons
+        if (forgroundBitmap == null) {
+   			forgroundBitmap = Bitmap.createBitmap(grayImage.width(), grayImage.height(), Config.ALPHA_8);
+        }
+   		forgroundBitmap.copyPixelsFromBuffer(foreground.getByteBuffer());
+   		consistencyAnalysis.processNewFrame(foreground.getByteBuffer(), forgroundBitmap.getHeight(), forgroundBitmap.getWidth(), new CvRect(cvGetSeqElem(faces, 0)));
    		postInvalidate();
+    }
+    
+    // todo: delete
+    static int debugPictureCount = 0;
+    private static void debugPrintIplImage(IplImage src, Context context) {
+    	File file = new File(context.getExternalFilesDir(null), "testimage_same.jpg");
+    	cvSaveImage(file.getAbsolutePath(), src);
+    	debugPictureCount++;
     }
     
     @Override
@@ -119,6 +182,17 @@ public class FaceView extends View implements Camera.PreviewCallback {
         
         float textWidth = paint.measureText(displayedText);
         canvas.drawText(displayedText, (getWidth()-textWidth)/2, 20, paint);
+
+        // show motion tracking, makes for a cool demo
+        if (forgroundBitmap != null) {
+        	paint.setColor(Color.BLACK);
+            paint.setStrokeWidth(0);
+            canvas.drawRect(0, 0, forgroundBitmap.getWidth(), forgroundBitmap.getHeight(), paint);
+            paint.setColor(Color.WHITE);
+        	canvas.drawBitmap(forgroundBitmap, new Matrix(), paint);
+        }
+        
+        consistencyAnalysis.drawChartCMD(canvas, paint);
         
         paint.setStrokeWidth(2);
         paint.setColor(Color.RED);

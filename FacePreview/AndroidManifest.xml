@@ -36,7 +36,7 @@
               android:theme="@android:style/Theme.Holo.Light"
               android:screenOrientation="landscape" />
 		  <activity
-              android:name="CompletedAuthorization"
+              android:name="com.googlecode.javacv.facepreview.CompletedAuthorization"
               android:label="Processing images..."
               android:theme="@android:style/Theme.Holo.Light"
               android:screenOrientation="landscape" />

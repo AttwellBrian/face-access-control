@@ -1,4 +1,4 @@
-package com.googlecode.javacv.facepreview.util;
+package com.googlecode.javacv.facepreview.compute;
 
 import java.util.Collection;
 import java.util.LinkedList;

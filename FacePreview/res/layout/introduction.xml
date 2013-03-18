@@ -13,7 +13,7 @@
         android:layout_marginRight="30dp"
         android:layout_weight="1"
         android:gravity="center|left"
-        android:text="In order to set you as the authorized user, we need to take three screenshots of your face."
+        android:text="In order to set you as the authorized user, we need to take three pictures of your face."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="30sp" />
 

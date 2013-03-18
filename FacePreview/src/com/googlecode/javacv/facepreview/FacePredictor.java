@@ -44,39 +44,73 @@ import com.googlecode.javacv.cpp.opencv_core.MatVector;
 import com.googlecode.javacv.cpp.opencv_objdetect;
 import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
 
-// Purpose: trains and uses a FaceRecognizer class
-// minimally based off of https://github.com/pathikrit/JFaceRecog/blob/master/src/lib/FacialRecognition.java
+// Purpose: trains and uses a FaceRecognizer class to perform authorization
+// Currently, this learns several people's faces. The authorize()
+// function returns true if their face is more similar to the authorized
+// face than anyone else's face. We could simplify this: only compare the user's
+// face with the authorized person's face and return true iff difference <= threshold.
 public class FacePredictor {
       
     // see description of different algorithms here: http://docs.opencv.org/trunk/modules/contrib/doc/facerec/facerec_api.html
     private static final Double THRESHHOLD = Double.MAX_VALUE/2; // higher means a loser threshold.
     private static final FaceRecognizer ALGO_FACTORY =
         com.googlecode.javacv.cpp.opencv_contrib.createLBPHFaceRecognizer(1, 8, 8, 8, THRESHHOLD);
-        private static final Map<Integer, String> names = new HashMap<Integer, String>();
+    private static final Map<Integer, String> names = new HashMap<Integer, String>();
     public final FaceRecognizer algorithm;
 
-    private Context context; // store for debugging
-    
-    // Save IplImage to disk, so we can look at it later
-    public static void debugPrintIplImage(IplImage src, Context context) {
-    	Bitmap tmpbitmap = IplImageToBitmap(src);
-        MediaStore.Images.Media.insertImage(context.getContentResolver(), tmpbitmap, "image" + Calendar.getInstance().get(Calendar.SECOND) + debugPictureCount++ , "temp");
+    private Context context; // store for debugging    
+
+    // Load from file
+    public FacePredictor(Context applicationContext, String filename) throws Exception {
+  	    File file = new File(applicationContext.getFilesDir() + "/" + filename);
+  	    if (!file.exists()) {
+  	    	throw new Exception();
+  	    }
+  	    
+  	    this.context = applicationContext;
+  	    loadClassifier();
+  	  	algorithm = ALGO_FACTORY;
+  	    algorithm.load(context.getExternalFilesDir(null).getAbsolutePath() + "/" + filename);
     }
     
-    // todo; delete
-    private static Bitmap IplImageToBitmap(IplImage src) {//don't need to do this anymore... can use the cvSave function
-        int width = src.width();
-        int height = src.height();
-        int smallFactor = 4;
-        Bitmap bitmap = Bitmap.createBitmap(width/smallFactor, height/smallFactor, Bitmap.Config.ARGB_8888);
-        for(int r=0;r<height/smallFactor;r+=1) {
-            for(int c=0;c<width/smallFactor;c+=1) {
-                int gray = (int) Math.floor(cvGet2D(src,r*smallFactor,c*smallFactor).getVal(0));
-                bitmap.setPixel(c, r, Color.argb(255, gray, gray, gray));
-            }
-        }
-        return bitmap;
-    }
+    // This is a slow function. It is slow, because it has to load a lot of images.
+    // This doesn't need to be a problem. 
+    public FacePredictor(Context context, IplImage [] authorizedImages) throws IOException {
+      
+      this.context = context;
+      loadClassifier();
+      
+      final int numberOfImages = (8+1)*3; // TODO: calculate this more smartly.. maybe don't need to calculate
+      final MatVector images = new MatVector(numberOfImages);
+      final CvMat labels = cvCreateMat(1, numberOfImages, CV_32SC1);
+     
+      int imgCount = 0;      
+      addNameAndFace(authorizedImages[0], imgCount++, 11, images, labels);
+      addNameAndFace(authorizedImages[1], imgCount++, 11, images, labels);
+      addNameAndFace(authorizedImages[2], imgCount++, 11, images, labels);
+      
+      // TODO: process these images ahead of time (otherwise startup will take several minutes)
+      for (int personCount = 2; personCount < 10; personCount++) { // training people 2-10
+      	// TODO: use a couple images per person. We have the four images per person available. I'm just not using them.
+          String fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_05.jpg", personCount);
+          addNameAndFace(fileName, imgCount, personCount, images, labels);
+          imgCount++;
+          
+          fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_15.jpg", personCount);
+          addNameAndFace(fileName, imgCount, personCount, images, labels);
+          imgCount++;
+          
+          fileName = String.format("/com/googlecode/javacv/facepreview/data/b_%02d_15.jpg", personCount);
+          addNameAndFace(fileName, imgCount, personCount, images, labels);
+          imgCount++;
+          
+      }
+      
+      assert (numberOfImages == labels.size());
+      
+      this.algorithm = ALGO_FACTORY;
+      algorithm.train(images, labels);
+   }
     
   private void addNameAndFace(String fileName, int imgCount, int personCount, MatVector images, CvMat labels) throws IOException {
       File imageFile = Loader.extractResource(getClass(), fileName,
@@ -96,19 +130,6 @@ public class FacePredictor {
       names.put(personCount, name);
   }
   
-  // Load from file
-  public FacePredictor(Context applicationContext, String filename) throws Exception {
-	    File file = new File(applicationContext.getFilesDir() + "/" + filename);
-	    if (!file.exists()) {
-	    	throw new Exception();
-	    }
-	    
-	    this.context = applicationContext;
-	    loadClassifier();
-	  	algorithm = ALGO_FACTORY;
-	    algorithm.load(context.getExternalFilesDir(null).getAbsolutePath() + "/" + filename);
-  }
-  
   private void loadClassifier() throws IOException {
 	// Load the classifier file from Java resources.
 	    File classifierFile = Loader.extractResource(getClass(),
@@ -122,45 +143,6 @@ public class FacePredictor {
 	    classifier = new CvHaarClassifierCascade(cvLoad(classifierFile.getAbsolutePath()));
   }
   
-  // This is a slow function. It is slow, because it has to load a lot of images.
-  // This doesn't need to be a problem. 
-  public FacePredictor(Context context, IplImage [] authorizedImages) throws IOException {
-    
-    this.context = context;
-    loadClassifier();
-    
-    final int numberOfImages = (8+1)*3; // TODO: calculate this more smartly.. maybe don't need to calculate
-    final MatVector images = new MatVector(numberOfImages);
-    final CvMat labels = cvCreateMat(1, numberOfImages, CV_32SC1);
-   
-    int imgCount = 0;      
-    addNameAndFace(authorizedImages[0], imgCount++, 11, images, labels);
-    addNameAndFace(authorizedImages[1], imgCount++, 11, images, labels);
-    addNameAndFace(authorizedImages[2], imgCount++, 11, images, labels);
-    
-    // TODO: process these images ahead of time (otherwise startup will take several minutes)
-    for (int personCount = 2; personCount < 10; personCount++) { // training people 2-10
-    	// TODO: use a couple images per person. We have the four images per person available. I'm just not using them.
-        String fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_05.jpg", personCount);
-        addNameAndFace(fileName, imgCount, personCount, images, labels);
-        imgCount++;
-        
-        fileName = String.format("/com/googlecode/javacv/facepreview/data/a_%02d_15.jpg", personCount);
-        addNameAndFace(fileName, imgCount, personCount, images, labels);
-        imgCount++;
-        
-        fileName = String.format("/com/googlecode/javacv/facepreview/data/b_%02d_15.jpg", personCount);
-        addNameAndFace(fileName, imgCount, personCount, images, labels);
-        imgCount++;
-        
-    }
-    
-    assert (numberOfImages == labels.size());
-    
-    this.algorithm = ALGO_FACTORY;
-    algorithm.train(images, labels);
-  }
-    
   public boolean authenticate(IplImage image) {
 	  String name = identify(image).first;
 	  return name != null && name.equals("11");
@@ -215,14 +197,12 @@ public class FacePredictor {
    * This does facial detection and NOT facial recognition
    */
   private synchronized CvRect detectFace(IplImage image) {
-	synchronized (this) {//TODO: improve this
-		cvClearMemStorage(storage);
-	
-	    final CvSeq cvSeq = cvHaarDetectObjects(image, classifier, storage, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT);
-	    assert !cvSeq.isNull();
+	cvClearMemStorage(storage);
 
-	    return new CvRect(cvGetSeqElem(cvSeq, 0));
-	}
+    final CvSeq cvSeq = cvHaarDetectObjects(image, classifier, storage, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT);
+    assert !cvSeq.isNull();
+
+    return new CvRect(cvGetSeqElem(cvSeq, 0));
   }
 
   private static final CvSize SMALL_IMAGE_SIZE = new CvSize(400,400);
@@ -254,4 +234,25 @@ public class FacePredictor {
 	public void save(Context applicationContext, String filename) {		
 		algorithm.save(context.getExternalFilesDir(null).getAbsolutePath() + "/" + filename);
 	}
+	
+
+    // Save IplImage to disk, so we can look at it later
+    public static void debugPrintIplImage(IplImage src, Context context) {
+    	Bitmap tmpbitmap = IplImageToBitmap(src);
+        MediaStore.Images.Media.insertImage(context.getContentResolver(), tmpbitmap, "image" + Calendar.getInstance().get(Calendar.SECOND) + debugPictureCount++ , "temp");
+    }
+    
+    private static Bitmap IplImageToBitmap(IplImage src) {// can't use cvSave, since that would save into a mocked context
+        int width = src.width();
+        int height = src.height();
+        int smallFactor = 4;
+        Bitmap bitmap = Bitmap.createBitmap(width/smallFactor, height/smallFactor, Bitmap.Config.ARGB_8888);
+        for(int r=0;r<height/smallFactor;r+=1) {
+            for(int c=0;c<width/smallFactor;c+=1) {
+                int gray = (int) Math.floor(cvGet2D(src,r*smallFactor,c*smallFactor).getVal(0));
+                bitmap.setPixel(c, r, Color.argb(255, gray, gray, gray));
+            }
+        }
+        return bitmap;
+    }
 }

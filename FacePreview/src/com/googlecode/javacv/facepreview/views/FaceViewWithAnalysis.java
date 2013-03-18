@@ -20,7 +20,11 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.hardware.Camera;
+import android.hardware.Camera.PreviewCallback;
+import android.os.AsyncTask;
+import android.view.SurfaceHolder;
 import android.view.View;
+import android.widget.Toast;
 
 import com.googlecode.javacpp.Loader;
 import com.googlecode.javacv.cpp.opencv_core.CvMemStorage;
@@ -30,10 +34,13 @@ import com.googlecode.javacv.cpp.opencv_core.IplImage;
 import com.googlecode.javacv.cpp.opencv_objdetect;
 import com.googlecode.javacv.cpp.opencv_objdetect.CvHaarClassifierCascade;
 import com.googlecode.javacv.cpp.opencv_video.BackgroundSubtractorMOG2;
+import com.googlecode.javacv.facepreview.FacePredictor;
+import com.googlecode.javacv.facepreview.FacePredictorFactory;
+import com.googlecode.javacv.facepreview.LockScreen;
 import com.googlecode.javacv.facepreview.compute.BackgroundConsistencyAnalysis;
 
 // can we use startFaceDetection on camera? probably not
-public class FaceViewWithAnalysis extends View implements Camera.PreviewCallback {
+public class FaceViewWithAnalysis extends View implements PreviewCallback {
     public static final int CONSISTENCY_SUBSAMPLING_FACTOR = 8;
     public static final int RECOGNITION_SUBSAMPLING_FACTOR = 4;
 
@@ -41,14 +48,19 @@ public class FaceViewWithAnalysis extends View implements Camera.PreviewCallback
     public IplImage largerGrayImage;
     private IplImage foreground;
     private Bitmap forgroundBitmap;
-    public String displayedText = "Tap the screen to set your face - This side up.";    
+    public String displayedText = "Unlock with your face - This side up.";    
     
+    // used for quickly identifying face location
     private CvHaarClassifierCascade classifier;
     private CvMemStorage storage;
     private CvSeq faces;
     
-    private BackgroundConsistencyAnalysis consistencyAnalysis = new BackgroundConsistencyAnalysis();
+    // used for recognizing whos face it is
+    private FacePredictor facePredictor;
+    private long lastUnixTime = System.currentTimeMillis();//note: currentTimeMillis shouldn't be used for subsecond
     
+    // used for determining whether we are being shown a spoofed face (a pre-existing picture of the face)
+    private BackgroundConsistencyAnalysis consistencyAnalysis = new BackgroundConsistencyAnalysis();
     private BackgroundSubtractorMOG2 backgroundSubtractor;
     
     public FaceViewWithAnalysis(Context context) throws IOException {
@@ -72,6 +84,21 @@ public class FaceViewWithAnalysis extends View implements Camera.PreviewCallback
         storage = CvMemStorage.create();
         
         backgroundSubtractor = new BackgroundSubtractorMOG2(); 
+        
+        loadFacePredictor();
+    }
+    
+    private void loadFacePredictor() {
+    	new AsyncTask<Void, Void, FacePredictor>() {
+			@Override
+			protected FacePredictor doInBackground(Void... params) {
+				return FacePredictorFactory.createFacePredictor(getContext());
+			}
+			@Override
+			protected void onPostExecute(FacePredictor result) {
+				facePredictor = result;
+			}
+    	}.execute();
     }
     
     public void onPreviewFrame(final byte[] data, final Camera camera) {
@@ -85,13 +112,13 @@ public class FaceViewWithAnalysis extends View implements Camera.PreviewCallback
         }
     }
 
-    public interface FaceViewImageCallback {
-    	void image(IplImage image /*BGR*/);
+    public interface SuccessCallback {
+		void success(boolean b);
     }
-    public void setFaceViewImageCallback(FaceViewImageCallback callback) {
+    public void setSuccessCallback(SuccessCallback callback) {
     	mCallback = callback;
     }
-    FaceViewImageCallback mCallback = null;
+    SuccessCallback mCallback = null;
     
     private void createSubsampledImage(byte[] data, int width, int height, int f, IplImage subsampledImage) {
     	// TODO: speed this up
@@ -135,36 +162,76 @@ public class FaceViewWithAnalysis extends View implements Camera.PreviewCallback
         // this function has linear variance
         final double learningRate = 0.05;
         backgroundSubtractor.apply(grayImage, foreground, learningRate);
-        
-        // This callback only needs to be executed every few seconds. For this particular callback, we could do a larger subsampling
-        if (mCallback != null) {
-        	if (largerGrayImage == null || largerGrayImage.width() != width/RECOGNITION_SUBSAMPLING_FACTOR || largerGrayImage.height() != height/RECOGNITION_SUBSAMPLING_FACTOR) {
-            	try {
-            		largerGrayImage = IplImage.create(width/RECOGNITION_SUBSAMPLING_FACTOR, height/RECOGNITION_SUBSAMPLING_FACTOR, IPL_DEPTH_8U, 1);
-            	} catch (Exception e) {
-            		// ignore exception. It is only a warning in this case
-            		System.err.println(e.toString());
-            	}
-            }
-        	createSubsampledImage(data, width, height, RECOGNITION_SUBSAMPLING_FACTOR, largerGrayImage);
-            if (debugPictureCount == 0) {
-            	//debugPrintIplImage(grayImage, this.getContext());
-            }
-            mCallback.image(grayImage);
-        }
 
    		// detect face
 		cvClearMemStorage(storage);
 		faces = cvHaarDetectObjects(grayImage, classifier, storage, 1.1, 3, CV_HAAR_FIND_BIGGEST_OBJECT);
         
-	    // This is only needed for display reasons
         if (forgroundBitmap == null) {
+    	    // This bitmap is only used for displaying on the canvas
    			forgroundBitmap = Bitmap.createBitmap(grayImage.width(), grayImage.height(), Config.ALPHA_8);
         }
    		forgroundBitmap.copyPixelsFromBuffer(foreground.getByteBuffer());
    		consistencyAnalysis.processNewFrame(foreground.getByteBuffer(), forgroundBitmap.getHeight(), forgroundBitmap.getWidth(), new CvRect(cvGetSeqElem(faces, 0)));
    		postInvalidate();
+   		
+   		boolean everythingSuccessfulSoFar = consistencyAnalysis.pass();
+   		performRecognitionTest(data, width, height, everythingSuccessfulSoFar);
     }
+    
+    private void performRecognitionTest(byte[] data, int width, int height, boolean everythingElseSuccessful) {
+    	if (mCallback == null) {
+    		return;
+    	}
+    	
+    	if (facePredictor == null) {
+    		return;
+    	}
+    	
+		// Rate limit the analysis (should probably be done in the other function)
+		if (System.currentTimeMillis() <= lastUnixTime + 4000) {
+			return;
+		}
+		lastUnixTime = System.currentTimeMillis();
+    	
+		initLargerGrayImageIfNecessary(width, height);
+    	createSubsampledImage(data, width, height, RECOGNITION_SUBSAMPLING_FACTOR, largerGrayImage);
+        if (debugPictureCount == 0) {
+        	//debugPrintIplImage(grayImage, this.getContext());
+        }
+        
+        if (!everythingElseSuccessful) {
+        	mCallback.success(false);
+        	return;
+        }
+		
+    	// for the sake of safety, we are going to clone this image.
+    	// On fast cpus, this isn't necessary. However, we want to be certain
+    	// not to have two asynctasks messing with the same image.
+    	final IplImage ownedImage = largerGrayImage.clone();
+    	
+		new AsyncTask<Void, Void, Boolean>() {
+			@Override
+			protected Boolean doInBackground(Void... n) {
+				return facePredictor.authenticate(ownedImage);
+			}
+			@Override
+			protected void onPostExecute(Boolean result) {
+				mCallback.success(result);
+			}
+		}.execute();
+    }
+    
+	private void initLargerGrayImageIfNecessary(int width, int height) {
+    	if (largerGrayImage == null || largerGrayImage.width() != width/RECOGNITION_SUBSAMPLING_FACTOR || largerGrayImage.height() != height/RECOGNITION_SUBSAMPLING_FACTOR) {
+        	try {
+        		largerGrayImage = IplImage.create(width/RECOGNITION_SUBSAMPLING_FACTOR, height/RECOGNITION_SUBSAMPLING_FACTOR, IPL_DEPTH_8U, 1);
+        	} catch (Exception e) {
+        		// ignore exception. It is only a warning in this case
+        		System.err.println(e.toString());
+        	}
+        }
+	}
     
     // todo: delete
     static int debugPictureCount = 0;

@@ -31,27 +31,22 @@ import com.googlecode.javacv.facepreview.views.FaceView;
 import com.googlecode.javacv.facepreview.views.FaceViewWithAnalysis;
 import com.googlecode.javacv.facepreview.views.Preview;
 
-public class LockScreen extends Activity implements FaceViewWithAnalysis.FaceViewImageCallback {
+public class LockScreen extends Activity implements FaceViewWithAnalysis.SuccessCallback {
     private FrameLayout layout;
     private FaceViewWithAnalysis faceView;
     private Preview mPreview;
-    private FacePredictor facePredictor;
-    private static long lastUnixTime = System.currentTimeMillis();//don't use this for subsecond
 
-    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);        // Hide the window title.
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        loadFacePredictor();
         
-        // Create our Preview view and set it as the content of our activity.
         try {
             layout = new FrameLayout(this);
             faceView = new FaceViewWithAnalysis(this);
             mPreview = new Preview(this, faceView);
-            faceView.setFaceViewImageCallback(this);
+            faceView.setSuccessCallback(this);
             layout.addView(mPreview);
             layout.addView(faceView);
             setContentView(layout);
@@ -62,54 +57,13 @@ public class LockScreen extends Activity implements FaceViewWithAnalysis.FaceVie
         
     }
     
-    private void loadFacePredictor() {
-    	new AsyncTask<Void, Void, FacePredictor>() {
-			@Override
-			protected FacePredictor doInBackground(Void... params) {
-				return FacePredictorFactory.createFacePredictor(LockScreen.this);
-			}
-			@Override
-			protected void onPostExecute(FacePredictor result) {
-				facePredictor = result;
-			}
-    	}.execute();
-    }
-    
 	@Override
-	public void image(IplImage image) {
+	public void success(boolean bool) {
 
-		final IplImage ownedImage = image.clone();
-		if (facePredictor == null) {
-			return;
-		}
-		
-		// Rate limit the image analysis (should probably be done in the other function)
-		if (System.currentTimeMillis() <= lastUnixTime + 4000) {
-			return;
-		}
-		lastUnixTime = System.currentTimeMillis();
-		
-		new AsyncTask<Void, Void, Boolean>() {
-			@Override
-			protected Boolean doInBackground(Void... n) {
-				return facePredictor.authenticate(ownedImage);
-			}
-			@Override
-			protected void onPostExecute(Boolean result) {
-				if (result) {
-					//AlertDialog.Builder builder = new AlertDialog.Builder(LockScreen.this);
-					//builder.setMessage("You have unlocked the app!").setTitle("Success");
-					//AlertDialog dialog = builder.create();
-					//dialog.show();
-				}
-				
-				int duration = Toast.LENGTH_SHORT;
-				Toast toast = Toast.makeText(getApplicationContext(), "Debug: result = " + result, duration);
-				toast.show();
-				
-				// TODO: only let one of these async tasks execute at once (for performance reasons, not for correctness reasons)
-			}
-		}.execute();
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(getApplicationContext(), "Debug: result = " + bool, duration);
+		toast.show();
+
 	}
     
 }

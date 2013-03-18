@@ -1,25 +1,3 @@
-/*
- * FacePreview - A fusion of OpenCV's facedetect and Android's CameraPreview samples,
- *               with JavaCV + JavaCPP as the glue in between.
- *
- * This file was based on CameraPreview.java that came with the Samples for 
- * Android SDK API 8, revision 1 and contained the following copyright notice:
- *
- * Copyright (C) 2007 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.googlecode.javacv.facepreview;
 
 import static com.googlecode.javacv.cpp.opencv_core.cvGet2D;
@@ -94,11 +72,7 @@ public class AuthorizationSetup extends Activity {
 						// catch phony exception that gets thrown as warning
 					}
 					
-					
-					// TODO: initialize faceView.displayedText  somewhere
-					
 					// long running operation on UI thread...
-					//debugPrintIplImage(copiedImage, FacePreview.this);
 					
 					CharSequence text = "First image is securely set";
 					if (grayImages.size() == 1) {

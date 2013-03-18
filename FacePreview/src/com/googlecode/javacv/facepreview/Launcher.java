@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+// The App's entry point: immediately starts one of two different Activitys, without a transition animation.
 public class Launcher extends Activity {
 
     @Override

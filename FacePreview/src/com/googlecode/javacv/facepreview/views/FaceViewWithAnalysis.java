@@ -64,6 +64,7 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
     private BackgroundSubtractorMOG2 backgroundSubtractor;
     
     private boolean faceRecognitionSuccess = false;
+    private String recognizedFace = "";
     
     public FaceViewWithAnalysis(Context context) throws IOException {
         super(context);
@@ -191,7 +192,7 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
     	}
     	
 		// Rate limit the analysis (should probably be done in the other function)
-		if (System.currentTimeMillis() <= lastUnixTime + 3000) {
+		if (System.currentTimeMillis() <= lastUnixTime + 4000) {
 			return;
 		}
 		lastUnixTime = System.currentTimeMillis();
@@ -216,13 +217,19 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
     	final IplImage ownedImage = largerGrayImage.clone();
     	
 		new AsyncTask<Void, Void, Boolean>() {
+			String name;
+			
 			@Override
 			protected Boolean doInBackground(Void... n) {
-				return facePredictor.authenticate(ownedImage);
+				name = facePredictor.identify(ownedImage).first;
+				System.out.println("name = " + name);
+				return name != null && name.equals("11");
+				//return facePredictor.authenticate(ownedImage);
 			}
 			@Override
 			protected void onPostExecute(Boolean result) {
 				mCallback.success(result);
+				FaceViewWithAnalysis.this.recognizedFace = name;
 				FaceViewWithAnalysis.this.faceRecognitionSuccess = result;
 			}
 		}.execute();
@@ -262,8 +269,9 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
         	paint.setColor(Color.GREEN);	
         }
     	canvas.drawText("Consistency Analysis", 0, 80, paint);
+    	paint.setColor(Color.BLUE);
+    	canvas.drawText("Recognized face = " + this.recognizedFace, 0, 120, paint);
     	
-        paint.setColor(Color.BLUE);
         paint.setTextSize(30);
         float textWidth = paint.measureText(displayedText);
         canvas.drawText(displayedText, (getWidth()-textWidth)/2, 20, paint);

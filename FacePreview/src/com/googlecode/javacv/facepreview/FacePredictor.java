@@ -127,7 +127,6 @@ public class FacePredictor {
       images.put(imgCount, toTinyGray(image, faceRectangle));
       labels.put(imgCount, personCount);
       String name = new Integer(personCount).toString();
-      names.put(personCount, name);
   }
   
   private void loadClassifier() throws IOException {
@@ -148,6 +147,8 @@ public class FacePredictor {
 	  return name != null && name.equals("11");
   }
   
+ /*
+  
   // NOT EVER USED
   Pair<String, Double> identify(IplImage image, CvRect face) {
     final IplImage iplImage = toTinyGray(image, face);
@@ -158,6 +159,8 @@ public class FacePredictor {
     Double confidence_ = 100*(THRESHHOLD - confidence[0])/THRESHHOLD;
     return new Pair<String, Double>(name, confidence_); 
   }
+  
+  */
   
   // Input needs to be B
   public Pair<String, Double> identify(IplImage image) {
@@ -179,7 +182,8 @@ public class FacePredictor {
     final int[] prediction = new int[1];
     final double[] confidence = new double[1];
     algorithm.predict(iplImage, prediction, confidence);
-    String name = names.get(prediction[0]);
+    //String name = names.get(prediction[0]);
+    String name = new Integer(prediction[0]).toString();
     Double confidence_ = 100*(THRESHHOLD - confidence[0])/THRESHHOLD;
 
     // we return the identity with the highest confidence rating 

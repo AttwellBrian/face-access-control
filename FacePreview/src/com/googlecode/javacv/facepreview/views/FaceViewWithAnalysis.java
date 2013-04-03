@@ -63,6 +63,8 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
     private BackgroundConsistencyAnalysis consistencyAnalysis = new BackgroundConsistencyAnalysis();
     private BackgroundSubtractorMOG2 backgroundSubtractor;
     
+    private boolean faceRecognitionSuccess = false;
+    
     public FaceViewWithAnalysis(Context context) throws IOException {
         super(context);
  
@@ -189,7 +191,7 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
     	}
     	
 		// Rate limit the analysis (should probably be done in the other function)
-		if (System.currentTimeMillis() <= lastUnixTime + 4000) {
+		if (System.currentTimeMillis() <= lastUnixTime + 3000) {
 			return;
 		}
 		lastUnixTime = System.currentTimeMillis();
@@ -202,7 +204,10 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
         
         if (!everythingElseSuccessful) {
         	mCallback.success(false);
-        	return;
+        	// We don't need to perform the authentication step if consistency analysis failed
+        	// However, we do it anyway for debugging purposes. Therefore the following line
+        	// is commented out.
+        	//return;
         }
 		
     	// for the sake of safety, we are going to clone this image.
@@ -218,6 +223,7 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
 			@Override
 			protected void onPostExecute(Boolean result) {
 				mCallback.success(result);
+				FaceViewWithAnalysis.this.faceRecognitionSuccess = result;
 			}
 		}.execute();
     }
@@ -244,9 +250,21 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
     @Override
     protected void onDraw(Canvas canvas) {
         Paint paint = new Paint();
-        paint.setColor(Color.RED);
-        paint.setTextSize(20);
         
+        paint.setTextSize(30);
+        paint.setColor(Color.RED);
+        if (this.faceRecognitionSuccess) {
+        	paint.setColor(Color.GREEN);
+        }
+    	canvas.drawText("Face Recnogized", 0, 40, paint);
+    	paint.setColor(Color.RED);
+        if (this.consistencyAnalysis.pass()) {
+        	paint.setColor(Color.GREEN);	
+        }
+    	canvas.drawText("Consistency Analysis", 0, 80, paint);
+    	
+        paint.setColor(Color.BLUE);
+        paint.setTextSize(30);
         float textWidth = paint.measureText(displayedText);
         canvas.drawText(displayedText, (getWidth()-textWidth)/2, 20, paint);
 
@@ -254,15 +272,17 @@ public class FaceViewWithAnalysis extends View implements PreviewCallback {
         if (forgroundBitmap != null) {
         	paint.setColor(Color.BLACK);
             paint.setStrokeWidth(0);
-            canvas.drawRect(0, 0, forgroundBitmap.getWidth(), forgroundBitmap.getHeight(), paint);
+            int startX = canvas.getWidth()-forgroundBitmap.getWidth();
+            canvas.drawRect(startX, 0, startX+forgroundBitmap.getWidth(), forgroundBitmap.getHeight(), paint);
             paint.setColor(Color.WHITE);
-        	canvas.drawBitmap(forgroundBitmap, new Matrix(), paint);
+            canvas.drawBitmap(forgroundBitmap, startX, 0, paint);
+        	//canvas.drawBitmap(forgroundBitmap, new Matrix(), paint);
         }
         
         consistencyAnalysis.drawChartCMD(canvas, paint);
         
         paint.setStrokeWidth(2);
-        paint.setColor(Color.RED);
+        paint.setColor(Color.BLUE);
         
         if (faces != null) {
             paint.setStrokeWidth(2);

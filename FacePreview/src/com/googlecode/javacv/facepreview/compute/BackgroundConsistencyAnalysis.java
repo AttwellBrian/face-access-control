@@ -81,12 +81,15 @@ public class BackgroundConsistencyAnalysis {
 	public void drawChartCMD(Canvas c, Paint p) {
 		if (!pass()) {
 			p.setColor(Color.RED);
+		} else {
+			p.setColor(Color.GREEN);
 		}
 		Iterator<Double> it1 = motion_metric_ratio_chart.iterator();
 		for (int i = 0; i < length; i++) {
 			if (!it1.hasNext())
 				break;
 			double value = it1.next()/500.0;//divide by arbitrarily large value
+			value = Math.min(500, value);
 			Rect r = new Rect(i*3, 600-(int)(value*100), i*3+3, 600);
 			c.drawRect(r, p);
 		}
@@ -96,7 +99,7 @@ public class BackgroundConsistencyAnalysis {
 	
 	// arbitrarily chosen for now.
 	private final static int faceMotionMin = 500;
-	private final static double maxCMD = 1000;
+	private final static double maxCMD = 4000;
 	
 	private int totalMotionTrendFace() {
 		int totalMotionTrendFace  = 0;

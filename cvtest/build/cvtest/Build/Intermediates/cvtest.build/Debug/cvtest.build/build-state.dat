@@ -1,0 +1,795 @@
+Tcvtest
+v5
+r1
+cCheck dependencies
+cCompileC build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+cLd /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/cvtest normal x86_64
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c000000005159FB0D00000000000000AA
+t1364851469
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/alloca.h
+c00000000510DAF090000000000000588
+t1359851273
+s1416
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/assert.h
+c00000000510DAF090000000000000F6E
+t1359851273
+s3950
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/errno.h
+c00000000510DAF0A00000000000003EB
+t1359851274
+s1003
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/math.h
+c00000000510DAF0A00000000000066C2
+t1359851274
+s26306
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/pthread.h
+c00000000510DAF0A0000000000003CF0
+t1359851274
+s15600
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdint.h
+c00000000510DAF0A00000000000018EF
+t1359851274
+s6383
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdio.h
+c00000000510DAF0A0000000000004523
+t1359851274
+s17699
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/stdlib.h
+c00000000510DAF0A0000000000003089
+t1359851274
+s12425
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include/string.h
+c00000000510DAF0A0000000000001A3A
+t1359851274
+s6714
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/emmintrin.h
+c00000000510DAF0B000000000000EAA5
+t1359851275
+s60069
+i<xmmintrin.h>
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/float.h
+c00000000510DAF0B0000000000001538
+t1359851275
+s5432
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/limits.h
+c00000000510DAF0B0000000000000D03
+t1359851275
+s3331
+i"syslimits.h"
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/mm_malloc.h
+c00000000510DAF0B000000000000093D
+t1359851275
+s2365
+i<stdlib.h>
+i<errno.h>
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/mmintrin.h
+c00000000510DAF0B00000000000092B1
+t1359851275
+s37553
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/nmmintrin.h
+c00000000510DAF0B0000000000000620
+t1359851275
+s1568
+i<smmintrin.h>
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/pmmintrin.h
+c00000000510DAF0B000000000000155D
+t1359851275
+s5469
+i<xmmintrin.h>
+i<emmintrin.h>
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/smmintrin.h
+c00000000510DAF0B0000000000006250
+t1359851275
+s25168
+i<tmmintrin.h>
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/syslimits.h
+c00000000510DAF0B0000000000000155
+t1359851275
+s341
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/tmmintrin.h
+c00000000510DAF0B0000000000002527
+t1359851275
+s9511
+i<pmmintrin.h>
+
+N/Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/xmmintrin.h
+c00000000510DAF0B000000000000BECA
+t1359851275
+s48842
+i<mmintrin.h>
+i<mm_malloc.h>
+i<emmintrin.h>
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_calib3d.2.4.4.dylib
+c00000000515B9EB500000000000ACEA0
+t1364958901
+s708256
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_contrib.2.4.4.dylib
+c00000000515BA02A000000000010AA90
+t1364959274
+s1092240
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_core.2.4.4.dylib
+c00000000515B9E5B0000000000258DF8
+t1364958811
+s2461176
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_features2d.2.4.4.dylib
+c00000000515B9E9B00000000000C0AB8
+t1364958875
+s789176
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_flann.2.4.4.dylib
+c00000000515B9E61000000000007F43C
+t1364958817
+s521276
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_gpu.2.4.4.dylib
+c00000000515B9F6A000000000002E990
+t1364959082
+s190864
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_haartraining_engine.a
+c00000000515B9F5200000000000375F8
+t1364959058
+s226808
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_highgui.2.4.4.dylib
+c00000000515B9E8800000000002326C4
+t1364958856
+s2303684
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_imgproc.2.4.4.dylib
+c00000000515B9E7A000000000025BEDC
+t1364958842
+s2473692
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_legacy.2.4.4.dylib
+c00000000515B9F4B0000000000117DB4
+t1364959051
+s1146292
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_ml.2.4.4.dylib
+c00000000515B9E6E0000000000089810
+t1364958830
+s563216
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_nonfree.2.4.4.dylib
+c00000000515B9F0B0000000000024EE0
+t1364958987
+s151264
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_objdetect.2.4.4.dylib
+c00000000515B9E990000000000089F58
+t1364958873
+s565080
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_photo.2.4.4.dylib
+c00000000515B9E7D000000000002E9D4
+t1364958845
+s190932
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_stitching.2.4.4.dylib
+c00000000515B9F82000000000008EF1C
+t1364959106
+s585500
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_ts.2.4.4.dylib
+c00000000515B9EA400000000000B1C38
+t1364958884
+s728120
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_video.2.4.4.dylib
+c00000000515B9E8600000000000562D8
+t1364958854
+s352984
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_videostab.2.4.4.dylib
+c00000000515B9F75000000000003A5E8
+t1364959093
+s239080
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libtbb.dylib
+c00000000515B5CA4000000000002C1D4
+t1364941988
+s180692
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/cvtest.LinkFileList
+c00000000515BABBF0000000000000092
+t1364962239
+s146
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o
+t1364962240
+s343232
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/cvtest
+t1364962240
+s133916
+
+N/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp
+c00000000515BA0C50000000000002F36
+t1364959429
+s12086
+i"opencv2/objdetect/objdetect.hpp"
+i"opencv2/highgui/highgui.hpp"
+i"opencv2/imgproc/imgproc.hpp"
+i"precomp.hpp"
+i"opencv2/core/core.hpp"
+i"opencv2/contrib/contrib.hpp"
+i<iostream>
+i<sstream>
+i<stdio.h>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include/opencv2/calib3d/calib3d.hpp
+c000000005130CCD100000000000092FD
+t1362152657
+s37629
+i"opencv2/core/core.hpp"
+i"opencv2/features2d/features2d.hpp"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/src/precomp.hpp
+c000000005130CCD10000000000000A39
+t1362152657
+s2617
+i"cvconfig.h"
+i"opencv2/calib3d/calib3d.hpp"
+i"opencv2/imgproc/imgproc.hpp"
+i"opencv2/imgproc/imgproc_c.h"
+i"opencv2/core/internal.hpp"
+i"opencv2/features2d/features2d.hpp"
+i<vector>
+i"opencv2/calib3d/calib3d_tegra.hpp"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2/contrib/contrib.hpp
+c000000005130CCD1000000000000963D
+t1362152657
+s38461
+i"opencv2/core/core.hpp"
+i"opencv2/imgproc/imgproc.hpp"
+i"opencv2/features2d/features2d.hpp"
+i"opencv2/objdetect/objdetect.hpp"
+i"opencv2/contrib/retina.hpp"
+i"opencv2/contrib/openfabmap.hpp"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2/contrib/openfabmap.hpp
+c000000005130CCD10000000000003207
+t1362152657
+s12807
+i"opencv2/core/core.hpp"
+i"opencv2/features2d/features2d.hpp"
+i<vector>
+i<list>
+i<map>
+i<set>
+i<valarray>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2/contrib/retina.hpp
+c000000005130CCD10000000000005D97
+t1362152657
+s23959
+i"opencv2/core/core.hpp"
+i<valarray>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp
+c000000005130CCD1000000000002D320
+t1362152657
+s185120
+i"opencv2/core/types_c.h"
+i"opencv2/core/version.hpp"
+i<limits.h>
+i<algorithm>
+i<cmath>
+i<cstddef>
+i<complex>
+i<map>
+i<new>
+i<string>
+i<vector>
+i<sstream>
+i"opencv2/core/operations.hpp"
+i"opencv2/core/mat.hpp"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core_c.h
+c000000005130CCD10000000000013298
+t1362152657
+s78488
+i"opencv2/core/types_c.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/eigen.hpp
+c000000005130CCD100000000000024F9
+t1362152657
+s9465
+i"opencv2/core/core_c.h"
+i"opencv2/core/core.hpp"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/internal.hpp
+c000000005130CCD100000000000086D0
+t1362152657
+s34512
+i<vector>
+i<pthread.h>
+i"ipp.h"
+i"emmintrin.h"
+i"pmmintrin.h"
+i"tmmintrin.h"
+i<smmintrin.h>
+i<nmmintrin.h>
+i<immintrin.h>
+i<arm_neon.h>
+i"tbb/tbb_stddef.h"
+i"tbb/tbb.h"
+i"tbb/task.h"
+i<Eigen/Core>
+i"opencv2/core/eigen.hpp"
+i<malloc.h>
+i<alloca.h>
+i<stdlib.h>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/mat.hpp
+c00000000515B933B0000000000013924
+t1364955963
+s80164
+i<limits.h>
+i<string.h>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/operations.hpp
+c000000005130CCD1000000000001F7F6
+t1362152657
+s129014
+i<string.h>
+i<limits.h>
+i<ext/atomicity.h>
+i<bits/atomicity.h>
+i<limits>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h
+c000000005130CCD1000000000000DF8A
+t1362152657
+s57226
+i<assert.h>
+i<stdlib.h>
+i<string.h>
+i<float.h>
+i<stdint.h>
+i<intrin.h>
+i<emmintrin.h>
+i<fastmath.h>
+i<math.h>
+i<ipl.h>
+i<ipl/ipl.h>
+i"tegra_round.hpp"
+i"emmintrin.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/version.hpp
+c000000005130CCD10000000000000B70
+t1362152657
+s2928
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include/opencv2/features2d/features2d.hpp
+c000000005130CCD1000000000000F902
+t1362152657
+s63746
+i"opencv2/core/core.hpp"
+i"opencv2/flann/miniflann.hpp"
+i<limits>
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2/flann/config.h
+c000000005130CCD100000000000006FD
+t1362152657
+s1789
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2/flann/defines.h
+c000000005130CCD1000000000000124B
+t1362152657
+s4683
+i"config.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2/flann/miniflann.hpp
+c000000005130CCD10000000000001785
+t1362152657
+s6021
+i"opencv2/core/core.hpp"
+i"opencv2/flann/defines.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include/opencv2/highgui/highgui.hpp
+c000000005130CCD100000000000023CA
+t1362152657
+s9162
+i"opencv2/core/core.hpp"
+i"opencv2/highgui/highgui_c.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include/opencv2/highgui/highgui_c.h
+c000000005130CCD100000000000065A3
+t1362152657
+s26019
+i"opencv2/core/core_c.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2/imgproc/imgproc.hpp
+c000000005130CCD1000000000000D6EA
+t1362152657
+s55018
+i"opencv2/core/core.hpp"
+i"opencv2/imgproc/types_c.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2/imgproc/imgproc_c.h
+c000000005130CCD1000000000000767F
+t1362152657
+s30335
+i"opencv2/core/core_c.h"
+i"opencv2/imgproc/types_c.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2/imgproc/types_c.h
+c000000005130CCD10000000000003EB4
+t1362152657
+s16052
+i"opencv2/core/core_c.h"
+
+N/Users/jmorgan/workspace/javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp
+c000000005130CCD100000000000091B7
+t1362152657
+s37303
+i"opencv2/core/core.hpp"
+i<map>
+i<deque>
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_calib3d.2.4.4.dylib
+c00000000515B9EB500000000000ACEA0
+t1364958901
+s708256
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_calib3d.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_contrib.2.4.4.dylib
+c00000000515BA02A000000000010AA90
+t1364959274
+s1092240
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_contrib.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_core.2.4.4.dylib
+c00000000515B9E5B0000000000258DF8
+t1364958811
+s2461176
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_core.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_features2d.2.4.4.dylib
+c00000000515B9E9B00000000000C0AB8
+t1364958875
+s789176
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_features2d.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_flann.2.4.4.dylib
+c00000000515B9E61000000000007F43C
+t1364958817
+s521276
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_flann.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_gpu.2.4.4.dylib
+c00000000515B9F6A000000000002E990
+t1364959082
+s190864
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_gpu.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_haartraining_engine.a
+c00000000515B9F5200000000000375F8
+t1364959058
+s226808
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_highgui.2.4.4.dylib
+c00000000515B9E8800000000002326C4
+t1364958856
+s2303684
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_highgui.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_imgproc.2.4.4.dylib
+c00000000515B9E7A000000000025BEDC
+t1364958842
+s2473692
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_imgproc.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_legacy.2.4.4.dylib
+c00000000515B9F4B0000000000117DB4
+t1364959051
+s1146292
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_legacy.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_ml.2.4.4.dylib
+c00000000515B9E6E0000000000089810
+t1364958830
+s563216
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_ml.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_nonfree.2.4.4.dylib
+c00000000515B9F0B0000000000024EE0
+t1364958987
+s151264
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_nonfree.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_objdetect.2.4.4.dylib
+c00000000515B9E990000000000089F58
+t1364958873
+s565080
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_objdetect.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_photo.2.4.4.dylib
+c00000000515B9E7D000000000002E9D4
+t1364958845
+s190932
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_photo.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_stitching.2.4.4.dylib
+c00000000515B9F82000000000008EF1C
+t1364959106
+s585500
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_stitching.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_ts.2.4.4.dylib
+c00000000515B9EA400000000000B1C38
+t1364958884
+s728120
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_ts.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_video.2.4.4.dylib
+c00000000515B9E8600000000000562D8
+t1364958854
+s352984
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_video.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_videostab.2.4.4.dylib
+c00000000515B9F75000000000003A5E8
+t1364959093
+s239080
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libopencv_videostab.2.4.dylib
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib/libtbb.dylib
+c00000000515B5CA4000000000002C1D4
+t1364941988
+s180692
+
+N/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/cvtest.LinkFileList
+c00000000515B5A0A0000000000000083
+t1364941322
+s131
+
+N/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o
+t1364959135
+s343140
+
+N/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug/cvtest
+t1364959135
+s133844
+
+N/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp
+c00000000515B9E410000000000002F36
+t1364958785
+s12086
+i"opencv2/objdetect/objdetect.hpp"
+i"opencv2/highgui/highgui.hpp"
+i"opencv2/imgproc/imgproc.hpp"
+i"precomp.hpp"
+i"opencv2/core/core.hpp"
+i"opencv2/contrib/contrib.hpp"
+i<iostream>
+i<sstream>
+i<stdio.h>
+
+CBuild AST from /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp
+r0
+
+CBuild AST from /Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese69030b9e30bb741^1bbb30b9e30bb741^---0#1#0#--18"Check dependencies36"FADE54A5-4A15-42AD-B696-0A1DC532A553-
+
+CCompileC build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s386655039.352103
+e386655040.396637
+r1
+xCompileC
+xbuild/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o
+x/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp:49,
+o                 from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp:46,
+o                 from /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:6:
+o../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':
+o../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h:793: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = char]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:185:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = unsigned char]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:186:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short int]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:187:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short unsigned int]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:188:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = int]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:189:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = float]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:190:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = double]':
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:191:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:191:   instantiated from here
+o/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:173: warning: implicit conversion shortens 64-bit value into a 32-bit value
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp04755a3fe30bb741^db8a6540e30bb741^-4902"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp:49,                 from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp:46,                 from /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:6:../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h:793: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = char]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:185:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = unsigned char]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:186:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short int]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:187:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short unsigned int]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:188:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = int]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:189:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = float]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:190:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = double]':/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:191:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:191:   instantiated from here/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp:173: warning: implicit conversion shortens 64-bit value into a 32-bit value25(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-386655039#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655039#529#167#4(36%IDEActivityLogHeaderInclusionMessage4@89"In file included from /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp-386655039#18446744073709551615#0#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^5#18446744073709551615#5#18446744073709551615#18446744073709551615#0#---4@126"In file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp-386655039#18446744073709551615#0#-0#-3@121"file://localhost/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---4@111"In file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp-386655039#18446744073709551615#0#-0#-3@106"file://localhost/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp0000000000000000^48#18446744073709551615#48#18446744073709551615#18446744073709551615#0#---2@207"Implicit conversion shortens 64-bit value into a 32-bit value in /Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h-386655039#18446744073709551615#0#-0#-3@158"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h0000000000000000^792#18446744073709551615#792#18446744073709551615#18446744073709551615#0#---1#-3@158"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h0000000000000000^792#18446744073709551615#792#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--32%IDEActivityLogContextInfoMessage5@22"Instantiated from here-386655040#872#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^184#18446744073709551615#184#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#970#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#1114#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#1443#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^185#18446744073709551615#185#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#1541#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#1685#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#2010#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^186#18446744073709551615#186#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#2108#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#2252#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#2586#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^187#18446744073709551615#187#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#2684#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#2828#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#3147#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^188#18446744073709551615#188#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#3245#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#3389#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#3710#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^189#18446744073709551615#189#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#3808#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#3952#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#4274#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^190#18446744073709551615#190#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#4372#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#4516#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386655040#4660#98#-0#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^190#18446744073709551615#190#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386655040#4758#144#-1#-3@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^172#18446744073709551615#172#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--0#0#0#-19%DVTDocumentLocation6@83"file://localhost/Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp0000000000000000^18854"CompileC build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o cvtest/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/jmorgan/workspace/face-access-control/cvtest    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-generated-files.hmap -I/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-own-target-headers.hmap -I/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-all-target-headers.hmap -iquote /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-project-headers.hmap -I/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/python -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/camera_wrapper -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/misc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/perf4au -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/python/src2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/python/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/misc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/camera_wrapper/android.3.0.1 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/retina -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/src/cuda -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/cuda -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/nvidia -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/test/nvidia -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/.settings -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/jni -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/res -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/.settings -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/config -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/lib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/src/kernels -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include/opencv2/calib3d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/etc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/tutorial -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2/contrib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include/opencv2/features2d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2/flann -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2/gpu -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/nvidia/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/nvidia/NPP_staging -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include/opencv2/highgui -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt/Milky -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2/imgproc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/res/values -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/drawable -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/layout -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/raw -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/values -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/src/cpp -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/src/java -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src/org -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/include/opencv2/legacy -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/include/opencv2/ml -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/include/opencv2/nonfree -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/include/opencv2/ocl -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/include/opencv2/photo -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include/opencv2/stitching -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/include/opencv2/ts -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/include/opencv2/video -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/include/opencv2/videostab -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/include/opencv2/world -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/colormaps -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/lbp -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/tutorial -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2/gpu/device -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt/Milky/48 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt/Milky/64 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src/org/opencv -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include/opencv2/stitching/detail -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/tutorial/facerec_video -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/tutorial/gender_classification -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2/gpu/device/detail -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src/org/opencv/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/android -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/calib3d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/features2d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/highgui -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/imgproc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/ml -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/objdetect -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/photo -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/utils -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/video -I/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/DerivedSources/x86_64 -I/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/DerivedSources -F/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug -c /Users/jmorgan/workspace/face-access-control/cvtest/cvtest/main.cpp -o /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o36"83EDAC69-DCF4-4735-A865-4827239E3C35-
+
+CCompileC build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o /Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42
+s386651934.644562
+e386651935.692853
+r1
+xCompileC
+xbuild/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o
+x/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp:49,
+o                 from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp:46,
+o                 from /Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:6:
+o../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':
+o../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h:793: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = char]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:185:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = unsigned char]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:186:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short int]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:187:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short unsigned int]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:188:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = int]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:189:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = float]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:190:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = double]':
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:191:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:191:   instantiated from here
+o/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:173: warning: implicit conversion shortens 64-bit value into a 32-bit value
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/jmorgan/workspace/test/cvtest/cvtest/main.cppb741a51ed70bb741^e561b11fd70bb741^-4437"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp:49,                 from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp:46,                 from /Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:6:../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h: In function 'int cvIplDepth(int)':../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h:793: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = char]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:185:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = unsigned char]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:186:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short int]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:187:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = short unsigned int]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:188:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = int]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:189:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = float]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:190:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp: In function 'void cv::elbp_(const cv::_InputArray&, const cv::_OutputArray&, int, int) [with _Tp = double]':/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:191:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:154: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:155: warning: implicit conversion shortens 64-bit value into a 32-bit value/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:191:   instantiated from here/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp:173: warning: implicit conversion shortens 64-bit value into a 32-bit value25(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-386651934#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651934#514#167#4(36%IDEActivityLogHeaderInclusionMessage4@74"In file included from /Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp-386651934#18446744073709551615#0#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^5#18446744073709551615#5#18446744073709551615#18446744073709551615#0#---4@126"In file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp-386651934#18446744073709551615#0#-0#-3@121"file://localhost/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect/objdetect.hpp0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---4@111"In file included from ../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp-386651934#18446744073709551615#0#-0#-3@106"file://localhost/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/core.hpp0000000000000000^48#18446744073709551615#48#18446744073709551615#18446744073709551615#0#---2@192"Implicit conversion shortens 64-bit value into a 32-bit value in /Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h-386651934#18446744073709551615#0#-0#-3@143"file://localhost/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h0000000000000000^792#18446744073709551615#792#18446744073709551615#18446744073709551615#0#---1#-3@143"file://localhost/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core/types_c.h0000000000000000^792#18446744073709551615#792#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--32%IDEActivityLogContextInfoMessage5@22"Instantiated from here-386651935#842#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^184#18446744073709551615#184#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#925#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#1054#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#1353#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^185#18446744073709551615#185#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#1436#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#1565#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#1860#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^186#18446744073709551615#186#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#1943#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#2072#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#2376#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^187#18446744073709551615#187#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#2459#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#2588#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#2877#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^188#18446744073709551615#188#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#2960#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#3089#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#3380#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^189#18446744073709551615#189#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#3463#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#3592#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#3884#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^190#18446744073709551615#190#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#3967#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^153#18446744073709551615#153#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#4096#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^154#18446744073709551615#154#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--5@22"Instantiated from here-386651935#4225#83#-0#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^190#18446744073709551615#190#18446744073709551615#18446744073709551615#0#19"LLVM GCC 4.2 Notice--2@61"Implicit conversion shortens 64-bit value into a 32-bit value-386651935#4308#129#-1#-3@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^172#18446744073709551615#172#18446744073709551615#18446744073709551615#0#61"Implicit conversion shortens 64-bit value into a 32-bit value--0#0#0#-19%DVTDocumentLocation6@68"file://localhost/Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp0000000000000000^19096"CompileC build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o cvtest/main.cpp normal x86_64 c++ com.apple.compilers.llvmgcc42    cd /Users/jmorgan/workspace/test/cvtest    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wuninitialized -Wshorten-64-to-32 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -mmacosx-version-min=10.8 -gdwarf-2 -fvisibility-inlines-hidden -iquote /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-generated-files.hmap -I/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-own-target-headers.hmap -I/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-all-target-headers.hmap -iquote /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/cvtest-project-headers.hmap -I/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/python -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/camera_wrapper -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/misc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/perf4au -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/python/src2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/python/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/misc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/doc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/include -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/perf -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/src -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/test -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/include -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/src -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/include -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/androidcamera/camera_wrapper/android.3.0.1 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/retina -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/src/cuda -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/cuda -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/nvidia -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/test/nvidia -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/.settings -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/jni -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/res -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/.settings -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/config -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/lib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/doc/pics -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/src/kernels -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/include/opencv2 -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/include/opencv2 -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/include/opencv2 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/calib3d/include/opencv2/calib3d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/etc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/src -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/tutorial -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/include/opencv2/contrib -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/core/include/opencv2/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/features2d/include/opencv2/features2d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/flann/include/opencv2/flann -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2/gpu -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/nvidia/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/src/nvidia/NPP_staging -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/include/opencv2/highgui -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt/Milky -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/imgproc/include/opencv2/imgproc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_lib/res/values -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/drawable -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/layout -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/raw -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/res/values -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/src/cpp -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/generator/src/java -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src/org -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/legacy/include/opencv2/legacy -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ml/include/opencv2/ml -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/nonfree/include/opencv2/nonfree -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/objdetect/include/opencv2/objdetect -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ocl/include/opencv2/ocl -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/photo/include/opencv2/photo -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include/opencv2/stitching -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/ts/include/opencv2/ts -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/video/include/opencv2/video -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/videostab/include/opencv2/videostab -I/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/world/include/opencv2/world -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/colormaps -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/lbp -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/tutorial -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2/gpu/device -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt/Milky/48 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/highgui/src/files_Qt/Milky/64 -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src/org/opencv -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/stitching/include/opencv2/stitching/detail -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/tutorial/facerec_video -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/contrib/doc/facerec/img/tutorial/gender_classification -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/gpu/include/opencv2/gpu/device/detail -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/test/src/org/opencv/test -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/android -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/calib3d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/core -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/features2d -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/highgui -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/imgproc -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/ml -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/objdetect -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/photo -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/utils -I../../javacv-build/javacv-cppjars/opencv-2.4.4/modules/java/android_test/src/org/opencv/test/video -I/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/DerivedSources/x86_64 -I/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/DerivedSources -F/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug -c /Users/jmorgan/workspace/test/cvtest/cvtest/main.cpp -o /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/main.o36"64B083EB-C507-4E47-847D-BF5FD3AE4E5C-
+
+CLd /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/cvtest normal x86_64
+s386655040.403894
+e386655040.436736
+r1
+xLd
+x/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/cvtest
+xnormal
+xx86_64
+old: warning: directory not found for option '-L/Users/jmorgan/workspace/face-access-control/cvtest/../../build_macosx-x86_64/lib'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Link /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/cvtestb37e6740e30bb741^06d86f40e30bb741^-130"ld: warning: directory not found for option '-L/Users/jmorgan/workspace/face-access-control/cvtest/../../build_macosx-x86_64/lib'1(21%IDEActivityLogMessage2@116"Directory not found for option '-L/Users/jmorgan/workspace/face-access-control/cvtest/../../build_macosx-x86_64/lib'-386655040#0#130#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--2202"Ld build/cvtest/Build/Products/Debug/cvtest normal x86_64    cd /Users/jmorgan/workspace/face-access-control/cvtest    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug -L/Users/jmorgan/workspace/face-access-control/cvtest/../../build_macosx-x86_64/lib -L/Users/jmorgan/workspace/face-access-control/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib -F/Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug -filelist /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/cvtest.LinkFileList -mmacosx-version-min=10.8 -stdlib=libc++ -lopencv_calib3d.2.4.4 -lopencv_calib3d.2.4.4 -lopencv_calib3d.2.4.4 -lopencv_contrib.2.4.4 -lopencv_contrib.2.4.4 -lopencv_contrib.2.4.4 -lopencv_core.2.4.4 -lopencv_core.2.4.4 -lopencv_core.2.4.4 -lopencv_features2d.2.4.4 -lopencv_features2d.2.4.4 -lopencv_features2d.2.4.4 -lopencv_flann.2.4.4 -lopencv_flann.2.4.4 -lopencv_flann.2.4.4 -lopencv_gpu.2.4.4 -lopencv_gpu.2.4.4 -lopencv_gpu.2.4.4 -lopencv_haartraining_engine -lopencv_highgui.2.4.4 -lopencv_highgui.2.4.4 -lopencv_highgui.2.4.4 -lopencv_imgproc.2.4.4 -lopencv_imgproc.2.4.4 -lopencv_imgproc.2.4.4 -lopencv_legacy.2.4.4 -lopencv_legacy.2.4.4 -lopencv_legacy.2.4.4 -lopencv_ml.2.4.4 -lopencv_ml.2.4.4 -lopencv_ml.2.4.4 -lopencv_nonfree.2.4.4 -lopencv_nonfree.2.4.4 -lopencv_nonfree.2.4.4 -lopencv_objdetect.2.4.4 -lopencv_objdetect.2.4.4 -lopencv_objdetect.2.4.4 -lopencv_photo.2.4.4 -lopencv_photo.2.4.4 -lopencv_photo.2.4.4 -lopencv_stitching.2.4.4 -lopencv_stitching.2.4.4 -lopencv_stitching.2.4.4 -lopencv_ts.2.4.4 -lopencv_ts.2.4.4 -lopencv_ts.2.4.4 -lopencv_video.2.4.4 -lopencv_video.2.4.4 -lopencv_video.2.4.4 -lopencv_videostab.2.4.4 -lopencv_videostab.2.4.4 -lopencv_videostab.2.4.4 -ltbb -o /Users/jmorgan/workspace/face-access-control/cvtest/build/cvtest/Build/Products/Debug/cvtest36"5D2C34B5-116A-42A9-A8D8-B9B7D54F53CF-
+
+CLd /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug/cvtest normal x86_64
+s386652078.611737
+e386652078.658773
+r1
+xLd
+x/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug/cvtest
+xnormal
+xx86_64
+old: warning: directory not found for option '-L/Users/jmorgan/workspace/test/cvtest/../../build_macosx-x86_64/lib'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Link /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug/cvtest2bbf9caed70bb741^05a5a8aed70bb741^-115"ld: warning: directory not found for option '-L/Users/jmorgan/workspace/test/cvtest/../../build_macosx-x86_64/lib'1(21%IDEActivityLogMessage2@101"Directory not found for option '-L/Users/jmorgan/workspace/test/cvtest/../../build_macosx-x86_64/lib'-386652078#0#115#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--2097"Ld build/cvtest/Build/Products/Debug/cvtest normal x86_64    cd /Users/jmorgan/workspace/test/cvtest    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/usr/bin/llvm-g++-4.2 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug -L/Users/jmorgan/workspace/test/cvtest/../../build_macosx-x86_64/lib -L/Users/jmorgan/workspace/test/cvtest/../../javacv-build/javacv-cppjars/opencv-2.4.4/build_macosx-x86_64/lib -F/Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug -filelist /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Intermediates/cvtest.build/Debug/cvtest.build/Objects-normal/x86_64/cvtest.LinkFileList -mmacosx-version-min=10.8 -stdlib=libc++ -lopencv_calib3d.2.4.4 -lopencv_calib3d.2.4.4 -lopencv_calib3d.2.4.4 -lopencv_contrib.2.4.4 -lopencv_contrib.2.4.4 -lopencv_contrib.2.4.4 -lopencv_core.2.4.4 -lopencv_core.2.4.4 -lopencv_core.2.4.4 -lopencv_features2d.2.4.4 -lopencv_features2d.2.4.4 -lopencv_features2d.2.4.4 -lopencv_flann.2.4.4 -lopencv_flann.2.4.4 -lopencv_flann.2.4.4 -lopencv_gpu.2.4.4 -lopencv_gpu.2.4.4 -lopencv_gpu.2.4.4 -lopencv_haartraining_engine -lopencv_highgui.2.4.4 -lopencv_highgui.2.4.4 -lopencv_highgui.2.4.4 -lopencv_imgproc.2.4.4 -lopencv_imgproc.2.4.4 -lopencv_imgproc.2.4.4 -lopencv_legacy.2.4.4 -lopencv_legacy.2.4.4 -lopencv_legacy.2.4.4 -lopencv_ml.2.4.4 -lopencv_ml.2.4.4 -lopencv_ml.2.4.4 -lopencv_nonfree.2.4.4 -lopencv_nonfree.2.4.4 -lopencv_nonfree.2.4.4 -lopencv_objdetect.2.4.4 -lopencv_objdetect.2.4.4 -lopencv_objdetect.2.4.4 -lopencv_photo.2.4.4 -lopencv_photo.2.4.4 -lopencv_photo.2.4.4 -lopencv_stitching.2.4.4 -lopencv_stitching.2.4.4 -lopencv_stitching.2.4.4 -lopencv_ts.2.4.4 -lopencv_ts.2.4.4 -lopencv_ts.2.4.4 -lopencv_video.2.4.4 -lopencv_video.2.4.4 -lopencv_video.2.4.4 -lopencv_videostab.2.4.4 -lopencv_videostab.2.4.4 -lopencv_videostab.2.4.4 -ltbb -o /Users/jmorgan/workspace/test/cvtest/build/cvtest/Build/Products/Debug/cvtest36"F2AD7E25-2771-4609-841D-BA4F697A159E-
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FoundWorkingCopyPaths</key>
+	<array>
+		<string>/Users/jmorgan/workspace/face-access-control</string>
+	</array>
+	<key>LastWorkingCopyScanDate</key>
+	<date>2013-04-03T04:10:06Z</date>
+	<key>MissingFilePaths</key>
+	<array>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_photo.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_ml.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_contrib.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_core.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_nonfree.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_objdetect.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_haartraining_engine.a</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_highgui.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_legacy.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_calib3d.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_features2d.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_videostab.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_gpu.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_ts.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_video.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_stitching.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libtbb.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_flann.2.4.4.dylib</string>
+		<string>/Users/jmorgan/workspace/build_macosx-x86_64/lib/libopencv_imgproc.2.4.4.dylib</string>
+	</array>
+	<key>Version</key>
+	<integer>4</integer>
+</dict>
+</plist>

@@ -1,11 +1,11 @@
 ##Architecture
-All computations are done inside AsyncTasks, inside (UI) Activitys. For simplicity, no Service is used. Therefore, if you background the app while computations are taking place you may see crashes (I haven't seen any, but I wouldn't be surprised).
-
 FaceViewWithAnalysis calls all the CV functions on frames inside FaceViewWithAnalysis.processImage(). It performs consistency analysis on every frame and performs face prediction every few seconds.
 
 FacePredictor takes images as input, determines where the face is located and guesses who the face belongs to.
 
 BackgroundConsistencyAnalysis is used to determine whether the face is actually a foreground face, or likely a picture of a face (ie, a spoofed face).
+
+All computations are done inside AsyncTasks, inside (UI) Activitys. For simplicity, no Service is used. Therefore, if you background the app while computations are taking place you may see crashes (I haven't seen any, but I wouldn't be surprised).
 
 ##Setup on Mac OS X
 Setup the Android SDK with Eclipse as per Google's instructions. I don' think there should be any dependence on the Android NDK.
